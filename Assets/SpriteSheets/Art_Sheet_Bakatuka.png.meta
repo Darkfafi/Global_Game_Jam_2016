@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a7d6bb88002b941e7ae4f30b35743ef5
-timeCreated: 1454106200
+timeCreated: 1454109298
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -87,7 +87,7 @@ TextureImporter:
         width: 23
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_1
       rect:
@@ -97,7 +97,7 @@ TextureImporter:
         width: 33
         height: 65
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_2
       rect:
@@ -107,7 +107,7 @@ TextureImporter:
         width: 18
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_3
       rect:
@@ -116,8 +116,8 @@ TextureImporter:
         y: 869
         width: 96
         height: 91
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .852410316, y: .802459359}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_4
       rect:
@@ -126,8 +126,8 @@ TextureImporter:
         y: 870
         width: 95
         height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .149916485, y: .812191427}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_5
       rect:
@@ -137,17 +137,17 @@ TextureImporter:
         width: 173
         height: 63
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_6
       rect:
         serializedVersion: 2
         x: 38
-        y: 661
+        y: 662
         width: 234
         height: 197
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_7
       rect:
@@ -156,18 +156,18 @@ TextureImporter:
         y: 719
         width: 53
         height: 101
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .802935302, y: .937156141}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_8
       rect:
         serializedVersion: 2
         x: 456
-        y: 720
+        y: 721
         width: 53
         height: 101
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .175427124, y: .903092504}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_9
       rect:
@@ -177,7 +177,7 @@ TextureImporter:
         width: 135
         height: 143
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_10
       rect:
@@ -187,7 +187,7 @@ TextureImporter:
         width: 208
         height: 87
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_11
       rect:
@@ -197,7 +197,7 @@ TextureImporter:
         width: 214
         height: 252
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_12
       rect:
@@ -206,8 +206,8 @@ TextureImporter:
         y: 483
         width: 121
         height: 159
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .833360136, y: .114587173}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_13
       rect:
@@ -216,8 +216,8 @@ TextureImporter:
         y: 506
         width: 75
         height: 181
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .437943518, y: .0971480757}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_14
       rect:
@@ -226,8 +226,8 @@ TextureImporter:
         y: 488
         width: 114
         height: 170
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .227822825, y: .12127398}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_15
       rect:
@@ -237,7 +237,7 @@ TextureImporter:
         width: 56
         height: 59
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_16
       rect:
@@ -247,7 +247,7 @@ TextureImporter:
         width: 173
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_17
       rect:
@@ -256,8 +256,8 @@ TextureImporter:
         y: 335
         width: 161
         height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .875806749, y: .155937687}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_18
       rect:
@@ -266,8 +266,8 @@ TextureImporter:
         y: 337
         width: 162
         height: 116
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .160030782, y: .172331706}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_19
       rect:
@@ -276,8 +276,8 @@ TextureImporter:
         y: 236
         width: 79
         height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .714055121, y: .782711923}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_20
       rect:
@@ -286,38 +286,38 @@ TextureImporter:
         y: 233
         width: 79
         height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .248169914, y: .810852349}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_21
       rect:
         serializedVersion: 2
         x: 318
-        y: 222
+        y: 225
         width: 181
         height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .901188612, y: .474493951}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_22
       rect:
         serializedVersion: 2
-        x: 616
+        x: 615
         y: 221
         width: 182
         height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .144740179, y: .632630587}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_23
       rect:
         serializedVersion: 2
-        x: 61
+        x: 62
         y: 121
         width: 57
         height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .273132056, y: .822614491}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_24
       rect:
@@ -326,8 +326,8 @@ TextureImporter:
         y: 121
         width: 57
         height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .691965222, y: .768845439}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_25
       rect:
@@ -337,7 +337,7 @@ TextureImporter:
         width: 142
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_26
       rect:
@@ -347,7 +347,7 @@ TextureImporter:
         width: 167
         height: 117
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_27
       rect:
@@ -356,8 +356,8 @@ TextureImporter:
         y: 46
         width: 63
         height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .831575811, y: .596263289}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Art_Sheet_Bakatuka_28
       rect:
@@ -366,8 +366,8 @@ TextureImporter:
         y: 47
         width: 63
         height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .200002521, y: .599473059}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
