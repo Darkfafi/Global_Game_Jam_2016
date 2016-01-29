@@ -1,0 +1,375 @@
+fileFormatVersion: 2
+guid: a7d6bb88002b941e7ae4f30b35743ef5
+timeCreated: 1454106200
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Art_Sheet_Bakatuka_0
+    21300002: Art_Sheet_Bakatuka_1
+    21300004: Art_Sheet_Bakatuka_2
+    21300006: Art_Sheet_Bakatuka_3
+    21300008: Art_Sheet_Bakatuka_4
+    21300010: Art_Sheet_Bakatuka_5
+    21300012: Art_Sheet_Bakatuka_6
+    21300014: Art_Sheet_Bakatuka_7
+    21300016: Art_Sheet_Bakatuka_8
+    21300018: Art_Sheet_Bakatuka_9
+    21300020: Art_Sheet_Bakatuka_10
+    21300022: Art_Sheet_Bakatuka_11
+    21300024: Art_Sheet_Bakatuka_12
+    21300026: Art_Sheet_Bakatuka_13
+    21300028: Art_Sheet_Bakatuka_14
+    21300030: Art_Sheet_Bakatuka_15
+    21300032: Art_Sheet_Bakatuka_16
+    21300034: Art_Sheet_Bakatuka_17
+    21300036: Art_Sheet_Bakatuka_18
+    21300038: Art_Sheet_Bakatuka_19
+    21300040: Art_Sheet_Bakatuka_20
+    21300042: Art_Sheet_Bakatuka_21
+    21300044: Art_Sheet_Bakatuka_22
+    21300046: Art_Sheet_Bakatuka_23
+    21300048: Art_Sheet_Bakatuka_24
+    21300050: Art_Sheet_Bakatuka_25
+    21300052: Art_Sheet_Bakatuka_26
+    21300054: Art_Sheet_Bakatuka_27
+    21300056: Art_Sheet_Bakatuka_28
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Art_Sheet_Bakatuka_0
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 925
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_1
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 901
+        width: 33
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_2
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 933
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_3
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 869
+        width: 96
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_4
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 870
+        width: 95
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_5
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 875
+        width: 173
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_6
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 661
+        width: 234
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_7
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 719
+        width: 53
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_8
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 720
+        width: 53
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_9
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 766
+        width: 135
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_10
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 743
+        width: 208
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 393
+        width: 214
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_12
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 483
+        width: 121
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_13
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 506
+        width: 75
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_14
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 488
+        width: 114
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_15
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 623
+        width: 56
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_16
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 479
+        width: 173
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_17
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 335
+        width: 161
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_18
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 337
+        width: 162
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_19
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 236
+        width: 79
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_20
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 233
+        width: 79
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_21
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 222
+        width: 181
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_22
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 221
+        width: 182
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_23
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 121
+        width: 57
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_24
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 121
+        width: 57
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_25
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 47
+        width: 142
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_26
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 66
+        width: 167
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_27
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 46
+        width: 63
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Bakatuka_28
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 47
+        width: 63
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
