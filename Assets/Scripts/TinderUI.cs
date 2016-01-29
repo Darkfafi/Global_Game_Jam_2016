@@ -53,7 +53,6 @@ public class TinderUI : MonoBehaviour
 
 	private void Disliked()
 	{
-		print("disliked");
 
 		DOTween.CompleteAll(true);
 
@@ -67,7 +66,6 @@ public class TinderUI : MonoBehaviour
 
 	private void DislikeCompleted()
 	{
-        print("dislikecompl");
         levels[_indexToSwap].transform.SetAsFirstSibling();
 
         levels[_indexToSwap].transform.position = pos;
