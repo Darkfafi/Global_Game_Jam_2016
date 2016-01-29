@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class CharacterData : MonoBehaviour {
-	
 	private Dictionary<string,Transform> _allControlledParts = new Dictionary<string, Transform> (); // All parts with tag so we can check the values of specific parts / change them
 	private List<Transform> _allCharacterParts = new List<Transform>(); // All parts of the body in general
 
