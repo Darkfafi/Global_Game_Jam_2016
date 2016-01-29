@@ -53,11 +53,6 @@ public class TinderUI : MonoBehaviour
 
 	private void Disliked ()
 	{
-<<<<<<< HEAD
-		print ("disliked");
-=======
->>>>>>> 8cf9b78d9ae0d69bfb0a9e7ed63c4da7e77114cd
-
 		DOTween.CompleteAll (true);
 
 		levels [_indexToSwap].transform.DOMoveX (-16, 0.5f).SetEase (Ease.InSine).OnComplete (DislikeCompleted);
@@ -70,12 +65,7 @@ public class TinderUI : MonoBehaviour
 
 	private void DislikeCompleted ()
 	{
-<<<<<<< HEAD
-		print ("dislikecompl");
-		levels [_indexToSwap].transform.SetAsFirstSibling ();
-=======
         levels[_indexToSwap].transform.SetAsFirstSibling();
->>>>>>> 8cf9b78d9ae0d69bfb0a9e7ed63c4da7e77114cd
 
 		levels [_indexToSwap].transform.position = pos;
 		levels [_indexToSwap].transform.rotation = rot;
