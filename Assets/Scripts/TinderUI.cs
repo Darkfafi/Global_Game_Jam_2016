@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -44,6 +45,7 @@ public class TinderUI : MonoBehaviour
 	private void LikeCompleted()
 	{
 		print("load level: "+levels[_indexToSwap].levelName);
+        SceneManager.LoadScene(levels[_indexToSwap].levelName);
 
         levels[_indexToSwap].transform.position = pos;
         levels[_indexToSwap].transform.rotation = rot;
