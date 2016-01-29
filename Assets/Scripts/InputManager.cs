@@ -21,7 +21,7 @@ public class InputManager : MonoBehaviour
 
 	public bool GetAButton ()
 	{
-		#if UNITY_WINDWOWS
+		#if UNITY_WINDWOWS || UNITY_EDITOR
 		return Input.GetKey (KeyCode.Joystick1Button0);
 		#endif
 			
@@ -32,7 +32,7 @@ public class InputManager : MonoBehaviour
 
 	public bool GetBButton ()
 	{
-		#if UNITY_WINDWOWS
+		#if UNITY_WINDWOWS || UNITY_EDITOR
 		return Input.GetKey (KeyCode.Joystick1Button1);
 		#endif
 			
@@ -44,7 +44,7 @@ public class InputManager : MonoBehaviour
 
 	public bool GetXButton ()
 	{
-		#if UNITY_WINDWOWS
+		#if UNITY_WINDWOWS || UNITY_EDITOR
 		return Input.GetKey (KeyCode.Joystick1Button2);
 		#endif
 			
@@ -56,7 +56,7 @@ public class InputManager : MonoBehaviour
 
 	public bool GetYButton ()
 	{
-		#if UNITY_WINDWOWS
+		#if UNITY_WINDWOWS || UNITY_EDITOR
 		return Input.GetKey (KeyCode.Joystick1Button3);
 		#endif
 		

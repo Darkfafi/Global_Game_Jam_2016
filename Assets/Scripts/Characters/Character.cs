@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Character : MonoBehaviour {
+public abstract class Character : MonoBehaviour , ICharacter {
 
 	private CharacterData _characterData;
 
@@ -15,4 +15,6 @@ public class Character : MonoBehaviour {
 	public CharacterData characterData{
 		get{return _characterData;}
 	}
+
+	public abstract void CallPart(string namePart,int range);
 }
