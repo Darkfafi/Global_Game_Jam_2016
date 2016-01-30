@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-public class SeduceableTarget : Character {
+public class SeduceableTarget : MonoBehaviour {
 	
 
 	private void ChooseSeduction(){
