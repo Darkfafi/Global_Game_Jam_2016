@@ -46,9 +46,6 @@ public class TinderUI : MonoBehaviour
 	{
 		print ("load level: " + levels [_indexToSwap].levelName);
 		Application.LoadLevel (levels [_indexToSwap].levelName);
-
-		levels [_indexToSwap].transform.position = pos;
-		levels [_indexToSwap].transform.rotation = rot;
 	}
 
 	private void Disliked ()
@@ -80,7 +77,7 @@ public class TinderUI : MonoBehaviour
 
 		_indexToSwap--;
 		if (_indexToSwap == -1) {
-			_indexToSwap = 3;
+			_indexToSwap = levels.Count - 1;
 		}
 	}
 }
