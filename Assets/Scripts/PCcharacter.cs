@@ -107,18 +107,18 @@ public class PCcharacter : MonoBehaviour
 		if (!DoingMove) {
 			switch (Random.Range (0, 12)) {
 			case 0:
-				RightArmUpper.GetComponent<Animation> ().Play ();
+			//	RightArmUpper.GetComponent<Animation> ().Play ();
 			//	RightArmLower.GetComponent<Animation> ().Play ();
 				break;
 			case 1:
-				LeftArmUpper.GetComponent<Animation> ().Play ();
+			//	LeftArmUpper.GetComponent<Animation> ().Play ();
 			//	LeftArmLower.GetComponent<Animation> ().Play ();
 				break;
 			case 2:
-				RightLegUpper.GetComponent<Animation> ().Play ();
+			//	RightLegUpper.GetComponent<Animation> ().Play ();
 				break;
 			case 3:
-				LeftLegUpper.GetComponent<Animation> ().Play ();
+			//	LeftLegUpper.GetComponent<Animation> ().Play ();
 				break;
 			case 4:
 			//	SetMouth (1);
@@ -127,9 +127,11 @@ public class PCcharacter : MonoBehaviour
 			//	SetMouth (2);
 				break;
 			case 6:
+				DoMove ();
 			//	SetMouth (3);
 				break;
 			case 7:
+				DoMove ();
 			//	SetMouth (4);
 				break;
 			case 9:
@@ -326,6 +328,8 @@ public class PCcharacter : MonoBehaviour
 
 
 					//build filter for filtering out button mash
+
+					//TODO: 
 
 					if (Input.anyKey) {
 						if (InputManager.Instance.GetBButton () && InputManager.Instance.GetLeftBumberButton () && (Input.GetKey (KeyCode.UpArrow) || Input.GetAxis ("RightTriggerMac") > .5f || Input.GetAxis ("RightTriggerWin") > .5f)) {
