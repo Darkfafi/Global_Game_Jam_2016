@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ad931961247084c53a05c8b921103860
-timeCreated: 1454182597
+timeCreated: 1454185396
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -130,759 +130,499 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2960
-        width: 431.157898
-        height: 740
+        y: 4440
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_1
       rect:
         serializedVersion: 2
-        x: 431
-        y: 2960
-        width: 431.157898
-        height: 740
+        x: 450
+        y: 4440
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_2
       rect:
         serializedVersion: 2
-        x: 862
-        y: 2960
-        width: 431.157898
-        height: 740
+        x: 900
+        y: 4440
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_3
       rect:
         serializedVersion: 2
-        x: 1293
-        y: 2960
-        width: 431.157898
-        height: 740
+        x: 1350
+        y: 4440
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_4
       rect:
         serializedVersion: 2
-        x: 1724
-        y: 2960
-        width: 431.157898
-        height: 740
+        x: 1800
+        y: 4440
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_5
       rect:
         serializedVersion: 2
-        x: 2155
-        y: 2960
-        width: 431.157898
-        height: 740
+        x: 2250
+        y: 4440
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_6
       rect:
         serializedVersion: 2
-        x: 2586
-        y: 2960
-        width: 431.157898
-        height: 740
+        x: 2700
+        y: 4440
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_7
       rect:
         serializedVersion: 2
-        x: 3017
-        y: 2960
-        width: 431.157898
-        height: 740
+        x: 3150
+        y: 4440
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_8
       rect:
         serializedVersion: 2
-        x: 3448
-        y: 2960
-        width: 431.157898
-        height: 740
+        x: 3600
+        y: 4440
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_9
       rect:
         serializedVersion: 2
-        x: 3879
-        y: 2960
-        width: 431.157898
-        height: 740
+        x: 4050
+        y: 4440
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_10
       rect:
         serializedVersion: 2
-        x: 4310
-        y: 2960
-        width: 431.157898
-        height: 740
+        x: 0
+        y: 3330
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_11
       rect:
         serializedVersion: 2
-        x: 4741
-        y: 2960
-        width: 431.157898
-        height: 740
+        x: 450
+        y: 3330
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_12
       rect:
         serializedVersion: 2
-        x: 5172
-        y: 2960
-        width: 431.157898
-        height: 740
+        x: 900
+        y: 3330
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_13
       rect:
         serializedVersion: 2
-        x: 5603
-        y: 2960
-        width: 431.157898
-        height: 740
+        x: 1350
+        y: 3330
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_14
       rect:
         serializedVersion: 2
-        x: 6034
-        y: 2960
-        width: 431.157898
-        height: 740
+        x: 1800
+        y: 3330
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_15
       rect:
         serializedVersion: 2
-        x: 6465
-        y: 2960
-        width: 431.157898
-        height: 740
+        x: 2250
+        y: 3330
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_16
       rect:
         serializedVersion: 2
-        x: 6896
-        y: 2960
-        width: 431.157898
-        height: 740
+        x: 2700
+        y: 3330
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_17
       rect:
         serializedVersion: 2
-        x: 7327
-        y: 2960
-        width: 431.157898
-        height: 740
+        x: 3150
+        y: 3330
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_18
       rect:
         serializedVersion: 2
-        x: 7758
-        y: 2960
-        width: 431.157898
-        height: 740
+        x: 3600
+        y: 3330
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_19
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2220
-        width: 431.157898
-        height: 740
+        x: 4050
+        y: 3330
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_20
       rect:
         serializedVersion: 2
-        x: 431
+        x: 0
         y: 2220
-        width: 431.157898
-        height: 740
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_21
       rect:
         serializedVersion: 2
-        x: 862
+        x: 450
         y: 2220
-        width: 431.157898
-        height: 740
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_22
       rect:
         serializedVersion: 2
-        x: 1293
+        x: 900
         y: 2220
-        width: 431.157898
-        height: 740
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_23
       rect:
         serializedVersion: 2
-        x: 1724
+        x: 1350
         y: 2220
-        width: 431.157898
-        height: 740
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_24
       rect:
         serializedVersion: 2
-        x: 2155
+        x: 1800
         y: 2220
-        width: 431.157898
-        height: 740
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_25
       rect:
         serializedVersion: 2
-        x: 2586
+        x: 2250
         y: 2220
-        width: 431.157898
-        height: 740
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_26
       rect:
         serializedVersion: 2
-        x: 3017
+        x: 2700
         y: 2220
-        width: 431.157898
-        height: 740
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_27
       rect:
         serializedVersion: 2
-        x: 3448
+        x: 3150
         y: 2220
-        width: 431.157898
-        height: 740
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_28
       rect:
         serializedVersion: 2
-        x: 3879
+        x: 3600
         y: 2220
-        width: 431.157898
-        height: 740
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_29
       rect:
         serializedVersion: 2
-        x: 4310
+        x: 4050
         y: 2220
-        width: 431.157898
-        height: 740
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_30
       rect:
         serializedVersion: 2
-        x: 4741
-        y: 2220
-        width: 431.157898
-        height: 740
+        x: 0
+        y: 1110
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_31
       rect:
         serializedVersion: 2
-        x: 5172
-        y: 2220
-        width: 431.157898
-        height: 740
+        x: 450
+        y: 1110
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_32
       rect:
         serializedVersion: 2
-        x: 5603
-        y: 2220
-        width: 431.157898
-        height: 740
+        x: 900
+        y: 1110
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_33
       rect:
         serializedVersion: 2
-        x: 6034
-        y: 2220
-        width: 431.157898
-        height: 740
+        x: 1350
+        y: 1110
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_34
       rect:
         serializedVersion: 2
-        x: 6465
-        y: 2220
-        width: 431.157898
-        height: 740
+        x: 1800
+        y: 1110
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_35
       rect:
         serializedVersion: 2
-        x: 6896
-        y: 2220
-        width: 431.157898
-        height: 740
+        x: 2250
+        y: 1110
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_36
       rect:
         serializedVersion: 2
-        x: 7327
-        y: 2220
-        width: 431.157898
-        height: 740
+        x: 2700
+        y: 1110
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_37
       rect:
         serializedVersion: 2
-        x: 7758
-        y: 2220
-        width: 431.157898
-        height: 740
+        x: 3150
+        y: 1110
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_38
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1480
-        width: 431.157898
-        height: 740
+        x: 3600
+        y: 1110
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_39
       rect:
         serializedVersion: 2
-        x: 431
-        y: 1480
-        width: 431.157898
-        height: 740
+        x: 4050
+        y: 1110
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_40
       rect:
         serializedVersion: 2
-        x: 862
-        y: 1480
-        width: 431.157898
-        height: 740
+        x: 0
+        y: 0
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_41
       rect:
         serializedVersion: 2
-        x: 1293
-        y: 1480
-        width: 431.157898
-        height: 740
+        x: 450
+        y: 0
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_42
       rect:
         serializedVersion: 2
-        x: 1724
-        y: 1480
-        width: 431.157898
-        height: 740
+        x: 900
+        y: 0
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_43
       rect:
         serializedVersion: 2
-        x: 2155
-        y: 1480
-        width: 431.157898
-        height: 740
+        x: 1350
+        y: 0
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_44
       rect:
         serializedVersion: 2
-        x: 2586
-        y: 1480
-        width: 431.157898
-        height: 740
+        x: 1800
+        y: 0
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_45
       rect:
         serializedVersion: 2
-        x: 3017
-        y: 1480
-        width: 431.157898
-        height: 740
+        x: 2250
+        y: 0
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_46
       rect:
         serializedVersion: 2
-        x: 3448
-        y: 1480
-        width: 431.157898
-        height: 740
+        x: 2700
+        y: 0
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_47
       rect:
         serializedVersion: 2
-        x: 3879
-        y: 1480
-        width: 431.157898
-        height: 740
+        x: 3150
+        y: 0
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_48
       rect:
         serializedVersion: 2
-        x: 4310
-        y: 1480
-        width: 431.157898
-        height: 740
+        x: 3600
+        y: 0
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: stage1_49
       rect:
         serializedVersion: 2
-        x: 4741
-        y: 1480
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_50
-      rect:
-        serializedVersion: 2
-        x: 5172
-        y: 1480
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_51
-      rect:
-        serializedVersion: 2
-        x: 5603
-        y: 1480
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_52
-      rect:
-        serializedVersion: 2
-        x: 6034
-        y: 1480
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_53
-      rect:
-        serializedVersion: 2
-        x: 6465
-        y: 1480
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_54
-      rect:
-        serializedVersion: 2
-        x: 6896
-        y: 1480
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_55
-      rect:
-        serializedVersion: 2
-        x: 7327
-        y: 1480
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_56
-      rect:
-        serializedVersion: 2
-        x: 7758
-        y: 1480
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_57
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 740
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_58
-      rect:
-        serializedVersion: 2
-        x: 431
-        y: 740
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_59
-      rect:
-        serializedVersion: 2
-        x: 862
-        y: 740
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_60
-      rect:
-        serializedVersion: 2
-        x: 1293
-        y: 740
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_61
-      rect:
-        serializedVersion: 2
-        x: 1724
-        y: 740
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_62
-      rect:
-        serializedVersion: 2
-        x: 2155
-        y: 740
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_63
-      rect:
-        serializedVersion: 2
-        x: 2586
-        y: 740
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_64
-      rect:
-        serializedVersion: 2
-        x: 3017
-        y: 740
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_65
-      rect:
-        serializedVersion: 2
-        x: 3448
-        y: 740
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_66
-      rect:
-        serializedVersion: 2
-        x: 3879
-        y: 740
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_67
-      rect:
-        serializedVersion: 2
-        x: 4310
-        y: 740
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_68
-      rect:
-        serializedVersion: 2
-        x: 4741
-        y: 740
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_69
-      rect:
-        serializedVersion: 2
-        x: 5172
-        y: 740
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_70
-      rect:
-        serializedVersion: 2
-        x: 5603
-        y: 740
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_71
-      rect:
-        serializedVersion: 2
-        x: 6034
-        y: 740
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_72
-      rect:
-        serializedVersion: 2
-        x: 6465
-        y: 740
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_73
-      rect:
-        serializedVersion: 2
-        x: 6896
-        y: 740
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_74
-      rect:
-        serializedVersion: 2
-        x: 7327
-        y: 740
-        width: 431.157898
-        height: 740
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: stage1_75
-      rect:
-        serializedVersion: 2
-        x: 7758
-        y: 740
-        width: 431.157898
-        height: 740
+        x: 4050
+        y: 0
+        width: 450
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
