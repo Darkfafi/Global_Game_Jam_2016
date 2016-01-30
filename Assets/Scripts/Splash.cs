@@ -8,6 +8,7 @@ public class Splash : MonoBehaviour {
 
     private Vector3 scale;
 
+
     // Use this for initialization
     void Start ()
 	{
@@ -17,6 +18,8 @@ public class Splash : MonoBehaviour {
         splash.transform.DOPunchScale(Vector3.one * 30, 0.2f, 10, 0.5f).SetDelay(0.8f);
 
         splash.transform.DOMove(splash.transform.position, 3f).OnComplete(GotoLevel);
+
+        GetComponent<AudioSource>().Play();
     }
 
 	private void GotoLevel()
