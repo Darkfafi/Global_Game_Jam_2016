@@ -15,7 +15,6 @@ public class TinderUI : MonoBehaviour
     private Vector3 pos;
     private Quaternion rot;
 
-
     private int _indexToSwap = 0;
 
     private Sequence likeSequence;
@@ -55,6 +54,11 @@ public class TinderUI : MonoBehaviour
         levels[_indexToSwap].transform.DOMoveX(16, 0.5f).SetEase(Ease.InSine).OnComplete(LikeCompleted);
         levels[_indexToSwap].transform.DOMoveY(10, 0.4f).SetEase(Ease.InCirc);
         levels[_indexToSwap].transform.DORotate(new Vector3(0, 0, 40), 0.45f);
+
+		int nextIndex = _indexToSwap == 0 ? levels.Count - 1 : _indexToSwap - 1;
+        levels[nextIndex].transform.DOScale(levels[nextIndex].transform.localScale *= 0.96f, 0);
+        levels[nextIndex].transform.DOScale(Vector3.one, 0.3f);
+
         backgrounds[_indexToSwap].transform.DOScale(transform.localScale * 1.1f, 0.8f).SetEase(Ease.OutCubic);
 
 		for (int i = 0; i < levels.Count; i++)
@@ -66,14 +70,24 @@ public class TinderUI : MonoBehaviour
 				// Not so pretty for juicyness
             }
         }
-
-        // choose this level
     }
 
     private void LikeCompleted()
     {
         print("load level: " + levels[_indexToSwap].levelName);
-        Application.LoadLevel(levels[_indexToSwap].levelName);
+        LevelManager.Instance.ChooseLevel(_indexToSwap, levels.Count);
+
+		levels[_indexToSwap].transform.SetAsFirstSibling();
+
+        levels[_indexToSwap].transform.position = pos;
+        levels[_indexToSwap].transform.rotation = rot;
+
+
+        _indexToSwap--;
+        if (_indexToSwap == -1)
+        {
+            _indexToSwap = levels.Count - 1;
+        }
 
         // TODO what if level to load does not exist?
     }
@@ -85,12 +99,11 @@ public class TinderUI : MonoBehaviour
 
         DOTween.CompleteAll(true);
 
-        int nextIndex = _indexToSwap == 0 ? levels.Count - 1 : _indexToSwap - 1;
-
         levels[_indexToSwap].transform.DOMoveX(-16, 0.5f).SetEase(Ease.InSine).OnComplete(DislikeCompleted);
         levels[_indexToSwap].transform.DOMoveY(10, 0.4f).SetEase(Ease.InCirc);
         levels[_indexToSwap].transform.DORotate(new Vector3(0, 0, -40), 0.45f);
 
+        int nextIndex = _indexToSwap == 0 ? levels.Count - 1 : _indexToSwap - 1;
         levels[nextIndex].transform.DOScale(levels[nextIndex].transform.localScale *= 0.96f, 0);
         levels[nextIndex].transform.DOScale(Vector3.one, 0.3f);
 
