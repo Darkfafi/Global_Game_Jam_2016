@@ -35,4 +35,8 @@ public class Timer : MonoBehaviour
 			}
 		}
 	}
+
+	public void Reset(){
+		time = 0;
+	}
 }

@@ -66,7 +66,7 @@ public class Character : MonoBehaviour{
 		}
 	}
 	public void MoveToDirection(int direction){
-		_destination = transform.position + new Vector3(0.5f * direction,0,0);
+		_destination = transform.position + new Vector3(0.6f * direction,0,0);
 		_directionMoving = direction;
 		GetComponent<Animation> ().clip = _hopAnimation;
 		GetComponent<Animation> ().Play();
