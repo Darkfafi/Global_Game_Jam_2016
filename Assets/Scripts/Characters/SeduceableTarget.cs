@@ -123,8 +123,10 @@ public class SeduceableTarget : MonoBehaviour
 		PlayReversedAnimation ();
 		ChooseSeduction ();
 		ShowLove ();
-		if (_position == 3) {
-			Debug.Log("Win");
+		if (_position == 4) {
+			Debug.Log ("Win"); //TODO Show WIN effect and go back to menu.
+		} else {
+			StartCoroutine (WaitForListen (2));
 		}
 	}
 	private void LoseCondition ()
@@ -137,8 +139,10 @@ public class SeduceableTarget : MonoBehaviour
 		_listeningToSeduction = false;
 		ChooseSeduction ();
 		ShowHate ();
-		if (_position == -3) {
-			Debug.Log("End");
+		if (_position == -4) {
+			Debug.Log ("End"); //TODO Show LOSE effect and go back to menu.
+		} else {
+			StartCoroutine (WaitForListen (2));
 		}
 	}
 	private void ShowLove ()
@@ -147,13 +151,11 @@ public class SeduceableTarget : MonoBehaviour
 		_targetCharacter.MoveToDirection (1);
 		_position ++;
 		Instantiate (Resources.Load<GameObject> ("Prefabs/Heart"), new Vector3 (0, 0, -1), Quaternion.identity);
-		StartCoroutine (WaitForListen (2));
 	}
 	private void ShowHate(){
 		_character.MoveToDirection (1);
 		_targetCharacter.MoveToDirection (-1);
 		_position --;
-		Instantiate (Resources.Load<GameObject> ("Prefabs/Heart"), new Vector3 (0, 0, -1), Quaternion.identity);
-		StartCoroutine (WaitForListen (2));
+		Instantiate (Resources.Load<GameObject> ("Prefabs/Wrong"), new Vector3 (0, 0, -1), Quaternion.identity);
 	}
 }
