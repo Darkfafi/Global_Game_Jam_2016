@@ -5,6 +5,10 @@ public class SeduceableTarget : MonoBehaviour {
 
 	private Character _character;
 	[SerializeField]private Character _targetCharacter;
+
+	public int baseDificulty = 0;
+	public int currentDifficulty = 0;
+
 	private SeduceList _seduceList;
 	private int _seducePatternIndex = 0;
 
@@ -22,6 +26,7 @@ public class SeduceableTarget : MonoBehaviour {
 		_targetCharacter.DidMove += CheckCorrectMove;
 		ChooseSeduction (); //Difficulty has no fucntion yet..
 		StartCoroutine(WaitForListen (3));
+		currentDifficulty = baseDificulty;
 	}
 	void Update(){
 		if (Input.anyKey) {
@@ -44,7 +49,7 @@ public class SeduceableTarget : MonoBehaviour {
 			}
 		}
 		_seducePatternIndex = index;
-		_seduceList.SetList (PatternLibrary.GetPatternByIndex (index));
+		_seduceList.SetList (PatternLibrary.GetPatternByIndex (index,currentDifficulty));
 		if (playRev) {
 			PlayReversedAnimation ();
 		}
@@ -65,9 +70,13 @@ public class SeduceableTarget : MonoBehaviour {
 		if (_listeningToSeduction) {
 			if (_seduceList.CheckIfMatch (_targetCharacter)) {
 				_timesSeduces ++;
+				if(currentDifficulty < 2){
+					currentDifficulty ++;
+				}
 				_listeningToSeduction = false;
 				PlayReversedAnimation();
 				ChooseSeduction ();
+				_character.MoveToDirection(-1);
 				ShowLove ();
 			} else {
 				_timesIncorrectGuess++;
