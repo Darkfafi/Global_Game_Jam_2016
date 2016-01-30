@@ -3,10 +3,9 @@ using System.Collections;
 
 public class SoundHint : MonoBehaviour
 {
-
 	static public SoundHint Instance;
 
-	public Transform[] hints;
+	public Transform[] ParticleSys;
 
 	void Awake ()
 	{
@@ -19,22 +18,22 @@ public class SoundHint : MonoBehaviour
 
 	public void YellowY ()
 	{
-
+		Instantiate (ParticleSys [0]);
 	}
 
 	public void GreenA ()
 	{
-		
+		Instantiate (ParticleSys [1]);
 	}
 
 	public void RedB ()
 	{
-		
+		Instantiate (ParticleSys [2]);
 	}
 
 	public void BlueX ()
 	{
-		
+		Instantiate (ParticleSys [3]);
 	}
 
 }
