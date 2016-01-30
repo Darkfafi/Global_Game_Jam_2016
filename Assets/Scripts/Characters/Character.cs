@@ -52,13 +52,14 @@ public class Character : MonoBehaviour{
 		//StopCoroutine (ResetMouth ());
 		if (m != 0) {
 			StartCoroutine (ResetMouth ());
+			
+			GetComponent<AudioSource> ().clip = _allCharacterAudios[m - 1];
+			GetComponent<AudioSource> ().pitch = Random.Range (.7f, 1.4f);
+			GetComponent<AudioSource> ().Play ();
 		}
 		if (m < 1) {
 			m = 1; 
 		}
-		GetComponent<AudioSource> ().clip = _allCharacterAudios[m - 1];
-		GetComponent<AudioSource> ().pitch = Random.Range (.7f, 1.4f);
-		GetComponent<AudioSource> ().Play ();
 		
 	}
 	IEnumerator ResetMouth ()

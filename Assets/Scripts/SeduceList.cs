@@ -49,6 +49,42 @@ public class SeduceList : MonoBehaviour {
 		}
 		return result;
 	}
+	public string GetReversedMovement(string movementPartConst){
+		string returnPart = null;
+		switch (movementPartConst) {
+		case Tags.MOVE_PART_A:
+			returnPart = Tags.MOVE_PART_B;
+			break;
+		case Tags.MOVE_PART_B:
+			returnPart = Tags.MOVE_PART_A;
+			break;
+		case Tags.MOVE_PART_C:
+			returnPart = Tags.MOVE_PART_D;
+			break;
+		case Tags.MOVE_PART_D:
+			returnPart = Tags.MOVE_PART_C;
+			break;
+		}
+		return returnPart;
+	}
+	public int GetReversedAudio(int audioIndex){
+		int returnindex = 0; //0 == no sound
+		switch (audioIndex) {
+		case 1:
+			returnindex = 2;
+			break;
+		case 2:
+			returnindex = 1;
+			break;
+		case 3:
+			returnindex = 4;
+			break;
+		case 4:
+			returnindex = 3;
+			break;
+		}
+		return returnindex;
+	}
 }
 public class SeduceData{
 	public List<string> partsWantMoving = new List<string>();

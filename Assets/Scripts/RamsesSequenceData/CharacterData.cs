@@ -26,6 +26,7 @@ public class CharacterData : MonoBehaviour {
 
 	public Transform GetContolledPart(string name){
 		Transform tr = null;
+		Debug.Log (name + "fhgf");
 		switch (name) {
 		case Tags.MOVE_PART_A:
 			tr = _movingPartA;
@@ -40,7 +41,6 @@ public class CharacterData : MonoBehaviour {
 			tr = _movingPartD;
 			break;
 		}
-
 		return tr;
 	}
 	public Transform[] GetAllMouths(){

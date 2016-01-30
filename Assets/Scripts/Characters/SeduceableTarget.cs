@@ -8,7 +8,7 @@ public class SeduceableTarget : MonoBehaviour {
 	private SeduceList _seduceList;
 	private int _seducePatternIndex = 0;
 
-	void Awake(){
+	void Start(){
 		_character = gameObject.GetComponent<Character> ();
 		_seduceList = gameObject.GetComponent<SeduceList> ();
 		_targetCharacter.DidMove += CheckCorrectMove;
@@ -26,6 +26,15 @@ public class SeduceableTarget : MonoBehaviour {
 		}
 		_seducePatternIndex = index;
 		_seduceList.SetList (PatternLibrary.GetPatternByIndex (index));
+
+		PlayReversedAnimation ();
+	}
+
+	private void PlayReversedAnimation (){
+		for (int i = 0; i < _seduceList.allPartsNeedMoving.Count; i++) {
+			_character.CallPart(_seduceList.GetReversedMovement(_seduceList.allPartsNeedMoving[i]));
+			_character.SetMouth(_seduceList.GetReversedAudio(_seduceList.wantedSoundIndex));
+		}
 	}
 
 	private void CheckCorrectMove(){
