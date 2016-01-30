@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 public class SeduceableTarget : MonoBehaviour {
 
-	private List<SeduceData> _allSeduceItems = new List<SeduceData> ();
-
 	private Character _character;
 
 	void Awake(){
