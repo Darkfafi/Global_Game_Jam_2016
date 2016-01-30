@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
 	IEnumerator DelayLoadLevel ()
 	{
-		yield return new WaitForSeconds (3);
-		Application.LoadLevel (Application.loadedLevel + 1);
+		yield return new WaitForSeconds (5);
+		Application.LoadLevel (Application.loadedLevel - 1);//to replaced later
 	}
 }

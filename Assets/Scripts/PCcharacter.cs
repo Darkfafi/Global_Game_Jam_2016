@@ -37,6 +37,8 @@ public class PCcharacter : MonoBehaviour
 
 	int chosenMove = 0;
 
+	public Transform timer;
+
 	void Start ()
 	{
 		StartCoroutine (BlinkEyes ());
@@ -48,12 +50,6 @@ public class PCcharacter : MonoBehaviour
 
 	void SetMouth (int m)
 	{
-		if (m < 1) {
-			m = 1; 
-		}
-		GetComponent<AudioSource> ().clip = Sounds [m - 1];
-		GetComponent<AudioSource> ().pitch = Random.Range (.7f, 1.4f);
-		GetComponent<AudioSource> ().Play ();
 
 		for (int i = 0; i < mouth.Length; i++) {
 			if (i == m) {
@@ -68,6 +64,14 @@ public class PCcharacter : MonoBehaviour
 		if (ResetMouthFinsished) {
 			StartCoroutine (ResetMouth ());
 		}
+
+		if (m < 1) {
+			m = 1; 
+		}
+		GetComponent<AudioSource> ().clip = Sounds [m - 1];
+		GetComponent<AudioSource> ().pitch = Random.Range (.7f, 1.4f);
+		GetComponent<AudioSource> ().Play ();
+
 	}
 
 	IEnumerator BlinkEyes ()
@@ -93,7 +97,7 @@ public class PCcharacter : MonoBehaviour
 		Debug.Log ("do random animation");
 
 		if (!DoingMove) {
-			switch (Random.Range (0, 10)) {
+			switch (Random.Range (0, 12)) {
 			case 0:
 				RightArmUpper.GetComponent<Animation> ().Play ();
 				RightArmLower.GetComponent<Animation> ().Play ();
@@ -124,7 +128,10 @@ public class PCcharacter : MonoBehaviour
 				DoMove ();
 				break;
 			case 10:
-				DoMove ();
+			//	DoMove ();
+				break;
+			case 11:
+				//	DoMove ();
 				break;
 			}
 		}
@@ -133,18 +140,25 @@ public class PCcharacter : MonoBehaviour
 
 	void DoMove ()
 	{
-		heartPlaceholder.gameObject.SetActive (true);
+
+
+		timer.gameObject.SetActive (true);
 
 		Debug.LogWarning ("Doing Move!");
 
 		DoingMove = true;
 		chosenMove = Random.Range (0, 4);
+
+		//debug reasons
+		//chosenMove = 0;
+
 		switch (chosenMove) {
 		case 0:
 			SetMouth (3);
 			LeftArmUpper.GetComponent<Animation> ().Play ();
 			LeftArmLower.GetComponent<Animation> ().Play ();
 			RightLegUpper.GetComponent<Animation> ().Play ();
+
 
 			break;
 		case 1:
@@ -164,9 +178,10 @@ public class PCcharacter : MonoBehaviour
 
 			break;
 		case 3:
-			SetMouth (2);
+			SetMouth (1);
 			RightArmUpper.GetComponent<Animation> ().Play ();
 			RightArmLower.GetComponent<Animation> ().Play ();
+			LeftLegUpper.GetComponent<Animation> ().Play ();
 			break;
 		}
 
@@ -177,7 +192,8 @@ public class PCcharacter : MonoBehaviour
 	{
 		yield return new WaitForSeconds (5);
 		DoingMove = false;
-		heartPlaceholder.gameObject.SetActive (false);
+	
+		timer.gameObject.SetActive (false);
 	}
 
 	IEnumerator ResetMouth ()
@@ -186,7 +202,31 @@ public class PCcharacter : MonoBehaviour
 		yield return new WaitForSeconds (.5f);
 
 		SetMouth (0);
+
 		ResetMouthFinsished = true;
+	}
+
+	IEnumerator DisableWinHeartEffect ()
+	{
+
+		yield return new WaitForSeconds (3);
+		heartPlaceholder.gameObject.SetActive (false);
+
+	}
+
+	void WinMove ()
+	{
+		GameManager.Instance.AddLovePoints (1);
+		timer.GetComponent<Timer> ().timeInSeconds = 5;
+		timer.gameObject.SetActive (false);
+		heartPlaceholder.gameObject.SetActive (true);
+		StartCoroutine (DisableWinHeartEffect ());
+	}
+
+
+	void LooseMove ()
+	{
+
 	}
 
 	void Update ()
@@ -212,26 +252,26 @@ public class PCcharacter : MonoBehaviour
 				SetMouth (4);
 			}
 
-			if (Input.GetKey (KeyCode.RightArrow) || InputManager.Instance.GetLeftBumberButtonDown ()) {
+			if (Input.GetKey (KeyCode.RightArrow) || InputManager.Instance.GetRightBumberButtonDown ()) {
 				Debug.Log ("right arm animation");
 				RightArmUpper.GetComponent<Animation> ().Play ();
 				RightArmLower.GetComponent<Animation> ().Play ();
 			}
 
-			if (Input.GetKey (KeyCode.LeftArrow) || InputManager.Instance.GetRightBumberButtonDown ()) {
+			if (Input.GetKey (KeyCode.LeftArrow) || InputManager.Instance.GetLeftBumberButtonDown ()) {
 				Debug.Log ("right arm animation");
 				LeftArmUpper.GetComponent<Animation> ().Play ();
 				LeftArmLower.GetComponent<Animation> ().Play ();
 			}
 
-			if (Input.GetKey (KeyCode.UpArrow) || Input.GetAxis ("LeftTriggerMac") > .5f || Input.GetAxis ("LeftTriggerWin") > .5f) {
+			if (Input.GetKey (KeyCode.UpArrow) || Input.GetAxis ("RightTriggerMac") > .5f || Input.GetAxis ("RightTriggerWin") > .5f) {
 				Debug.Log ("right arm animation");
 				RightLegUpper.GetComponent<Animation> ().Play ();
 				//	RightLegLower.GetComponent<Animation> ().Play ();
 				//	RightFoot.GetComponent<Animation> ().Play ();
 			}
 
-			if (Input.GetKey (KeyCode.DownArrow) || Input.GetAxis ("RightTriggerMac") > .5f || Input.GetAxis ("RightTriggerWin") > .5f) {
+			if (Input.GetKey (KeyCode.DownArrow) || Input.GetAxis ("LeftTriggerMac") > .5f || Input.GetAxis ("LeftTriggerWin") > .5f) {
 				Debug.Log ("right arm animation");
 				LeftLegUpper.GetComponent<Animation> ().Play ();
 				//	LeftLegLower.GetComponent<Animation> ().Play ();
@@ -239,11 +279,21 @@ public class PCcharacter : MonoBehaviour
 			}
 		} else {
 			if (DoingMove) {
-				//check for player move
+				//check for player move temporary solution
 
 				switch (chosenMove) {
 				case 0:
+					//build filter for filtering out button mash
+					if (InputManager.Instance.GetBButton () && InputManager.Instance.GetLeftBumberButton () && (Input.GetKey (KeyCode.UpArrow) || Input.GetAxis ("RightTriggerMac") > .5f || Input.GetAxis ("RightTriggerWin") > .5f)) {
+						WinMove ();
+					} else {
 
+						if (InputManager.Instance.GetXButton () || InputManager.Instance.GetYButton () || InputManager.Instance.GetAButton () || InputManager.Instance.GetLeftBumberButton () || Input.GetKey (KeyCode.UpArrow) || Input.GetAxis ("RightTriggerMac") > .5f || Input.GetAxis ("RightTriggerWin") > .5f) {
+
+						}
+
+
+					}
 					/*
 					SetMouth (3);
 					LeftArmUpper.GetComponent<Animation> ().Play ();
@@ -254,6 +304,12 @@ public class PCcharacter : MonoBehaviour
 					break;
 				case 1:
 
+					if (InputManager.Instance.GetAButton () && InputManager.Instance.GetLeftBumberButton () && (Input.GetKey (KeyCode.DownArrow) || Input.GetAxis ("LeftTriggerMac") > .5f || Input.GetAxis ("LeftTriggerWin") > .5f)) {
+						WinMove ();
+						//	Debug.LogError ("WE DID IT WE MADE A COMBINATION!");
+					} else {
+						
+					}
 					/*
 					SetMouth (4);
 					LeftArmUpper.GetComponent<Animation> ().Play ();
@@ -263,6 +319,14 @@ public class PCcharacter : MonoBehaviour
 
 					break;
 				case 2:
+
+					if (InputManager.Instance.GetYButton () && InputManager.Instance.GetLeftBumberButton () && (Input.GetKey (KeyCode.UpArrow) || Input.GetAxis ("RightTriggerMac") > .5f || Input.GetAxis ("RightTriggerWin") > .5f)) {
+						WinMove ();
+						//	Debug.LogError ("WE DID IT WE MADE A COMBINATION!");
+					} else {
+
+					}
+
 					/*
 					SetMouth (2);
 					LeftArmUpper.GetComponent<Animation> ().Play ();
@@ -271,6 +335,13 @@ public class PCcharacter : MonoBehaviour
 					*/
 					break;
 				case 3:
+
+					if (InputManager.Instance.GetXButton () && InputManager.Instance.GetRightBumberButton ()) {
+						WinMove ();
+						//	Debug.LogError ("WE DID IT WE MADE A COMBINATION!");
+					} else {
+						
+					}
 					/*
 					SetMouth (2);
 					RightArmUpper.GetComponent<Animation> ().Play ();
