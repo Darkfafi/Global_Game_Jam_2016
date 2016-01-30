@@ -14,7 +14,7 @@ public class Bakatuka : Character {
 		currentPartAnimator = characterData.GetContolledPart (namePart).GetComponent<Animator> ();
 		currentPartAnimator.Play("PartMovement"); //Cal the animation "PartMovement" in the animator
 		if (!playNotRange) {
-			currentPartAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime = ((float)range * 0.01f); // sets 0 - 100 to 0 to 1.
+			//currentPartAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime = ((float)range * 0.01f); // sets 0 - 100 to 0 to 1.
 		}
 	}
 }
