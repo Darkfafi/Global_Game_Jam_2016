@@ -13,7 +13,8 @@ public class Character : MonoBehaviour{
 
 	private CharacterData _characterData;
 	[SerializeField]private List<AudioClip> _allCharacterAudios = new List<AudioClip> ();
-
+	[SerializeField]private AnimationClip _idleAnimation;
+	[SerializeField]private AnimationClip _hopAnimation;
 	private void Awake(){
 		_characterData = gameObject.GetComponent<CharacterData> ();
 		GetComponent<Animation> ().Play ();
@@ -67,6 +68,9 @@ public class Character : MonoBehaviour{
 	public void MoveToDirection(int direction){
 		_destination = transform.position + new Vector3(0.5f * direction,0,0);
 		_directionMoving = direction;
+		GetComponent<Animation> ().clip = _hopAnimation;
+		GetComponent<Animation> ().Play();
+
 	}
 
 	void Update(){
@@ -76,6 +80,8 @@ public class Character : MonoBehaviour{
 			if(_differents.x < 0.01f && _differents.y < 0.01f){
 				transform.position = _destination;
 				_directionMoving = 0;
+				GetComponent<Animation> ().clip = _idleAnimation;
+				GetComponent<Animation> ().Play();
 			}
 		}
 	}

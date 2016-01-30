@@ -77,6 +77,7 @@ public class SeduceableTarget : MonoBehaviour {
 				PlayReversedAnimation();
 				ChooseSeduction ();
 				_character.MoveToDirection(-1);
+				_targetCharacter.MoveToDirection(1);
 				ShowLove ();
 			} else {
 				_timesIncorrectGuess++;
@@ -96,7 +97,7 @@ public class SeduceableTarget : MonoBehaviour {
 	}
 	private void ShowLove(){
 		//TODO heart above head and show new pattern after x seconds.
-		Instantiate (Resources.Load<GameObject> ("Prefabs/Heart"), new Vector3 (), Quaternion.identity);
+		Instantiate (Resources.Load<GameObject> ("Prefabs/Heart"), new Vector3 (0,0,-1), Quaternion.identity);
 		StartCoroutine(WaitForListen (2));
 	}
 }
