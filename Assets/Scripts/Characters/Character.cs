@@ -28,11 +28,6 @@ public class Character : MonoBehaviour{
 			DidMove();
 		}
 	}
-	public void CallSound(){
-		if (DidMove != null) {
-			DidMove();
-		}
-	}
 	public int GetIndexOfAudio(AudioClip clip){
 		return _allCharacterAudios.IndexOf (clip);
 	}
@@ -61,7 +56,9 @@ public class Character : MonoBehaviour{
 		if (m < 1) {
 			m = 1; 
 		}
-		
+		if (DidMove != null) {
+			DidMove();
+		}
 	}
 	IEnumerator ResetMouth ()
 	{
