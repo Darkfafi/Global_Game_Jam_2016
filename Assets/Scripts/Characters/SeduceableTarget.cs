@@ -126,7 +126,9 @@ public class SeduceableTarget : MonoBehaviour
 		ShowLove ();
 		if (_position == 4) {
 			Debug.Log ("Win"); //TODO Show WIN effect and go back to menu.
-		} else {
+			LevelManager.Instance.SetMated(LevelManager.Instance.totalLevels - 1, true);
+            Application.LoadLevel("StartMenu");
+        } else {
 			StartCoroutine (WaitForListen (2));
 		}
 	}
@@ -142,7 +144,9 @@ public class SeduceableTarget : MonoBehaviour
 		ShowHate ();
 		if (_position == -4) {
 			Debug.Log ("End"); //TODO Show LOSE effect and go back to menu.
-		} else {
+			LevelManager.Instance.SetMated(LevelManager.Instance.totalLevels - 1, false);
+            Application.LoadLevel("StartMenu");
+        } else {
 			StartCoroutine (WaitForListen (2));
 		}
 	}

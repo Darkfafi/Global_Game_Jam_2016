@@ -23,7 +23,6 @@ public class TinderUI : MonoBehaviour
     private Sequence likeSequence;
     private Sequence dislikeSequence;
 
-
     bool AxisAllowed = true;
     // Use this for initialization
     void Start()
@@ -35,6 +34,13 @@ public class TinderUI : MonoBehaviour
 
         pos = levels[_indexToSwap].transform.position;
         rot = levels[_indexToSwap].transform.rotation;
+
+        LevelManager.Instance.totalLevels = levels.Count;
+
+		foreach (KeyValuePair<int, bool> pair in LevelManager.Instance.matedLevels)
+		{
+            levels[pair.Key].MateOrReject(pair.Value);
+        }
         //todo make work
     }
 
@@ -180,8 +186,10 @@ public class TinderUI : MonoBehaviour
 
         backgrounds[_indexToSwap].transform.SetAsFirstSibling();
 
-        levels[_indexToSwap].dislike.SetActive(true);
-
+		if (!levels[_indexToSwap].mated.activeSelf && !levels[_indexToSwap].rejected.activeSelf)
+		{
+        	levels[_indexToSwap].dislike.SetActive(true);
+		}
 
         //next frame
     }

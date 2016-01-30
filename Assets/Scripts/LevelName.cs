@@ -8,4 +8,15 @@ public class LevelName : MonoBehaviour {
     public GameObject mated;
     public GameObject rejected;
 
+	public void MateOrReject(bool matedBool)
+	{
+		if (matedBool)
+		{
+            mated.SetActive(true);
+        }
+		else
+		{
+            rejected.SetActive(true);
+		}
+	}
 }

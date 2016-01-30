@@ -9,6 +9,9 @@ public class LevelManager : MonoBehaviour {
     public int UnlockedLevel { get; private set; }
     private int _currentPlayedLevel = 0;
 
+    public int totalLevels = 6;
+	// ALWAYS SET THIS TO THE MAX
+
     public Dictionary<int, bool> matedLevels = new Dictionary<int, bool>();
 
     // Initialisation
@@ -25,6 +28,11 @@ public class LevelManager : MonoBehaviour {
 
         UnlockedLevel = 4;
 		// TODO playerprefs
+    }
+
+	public int GetCurrentLevel()
+	{
+        return _currentPlayedLevel;
     }
 
     public void ChooseLevel(int level, int totalLevels)
@@ -64,6 +72,11 @@ public class LevelManager : MonoBehaviour {
 
 	public void SetMated(int level, bool mated)
 	{
+		if (matedLevels.ContainsKey(level))
+		{
+            matedLevels[level] = mated;
+            return;
+        }
         matedLevels.Add(level, mated);
     }
 }
