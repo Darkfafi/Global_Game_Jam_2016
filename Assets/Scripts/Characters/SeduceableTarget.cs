@@ -1,10 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-public class SeduceableTarget : MonoBehaviour {
+public class SeduceableTarget : MonoBehaviour
+{
 
 	private Character _character;
-	[SerializeField]private Character _targetCharacter;
+	[SerializeField]
+	private Character
+		_targetCharacter;
+
+	[SerializeField]
+	private Transform
+		_timerTransform;
 
 	public int baseDificulty = 0;
 	public int currentDifficulty = 0;
@@ -20,64 +27,73 @@ public class SeduceableTarget : MonoBehaviour {
 
 	private float _timeIdle = 0;
 
-	void Start(){
+	void Start ()
+	{
 		_character = gameObject.GetComponent<Character> ();
 		_seduceList = gameObject.GetComponent<SeduceList> ();
 		_targetCharacter.DidMove += CheckCorrectMove;
 		ChooseSeduction (); //Difficulty has no fucntion yet..
-		StartCoroutine(WaitForListen (3));
+		StartCoroutine (WaitForListen (3));
 		currentDifficulty = baseDificulty;
+		_timerTransform.GetComponent<Timer> ().TimerEnd += LoseTimerEnd;
 	}
-	void Update(){
+	void Update ()
+	{
 		if (Input.anyKey) {
 			_timeIdle = 0;
 		}
 		_timeIdle += Time.deltaTime;
 		if (_timeIdle > 5) {
-			if(_listeningToSeduction){
-				PlayReversedAnimation();
+			if (_listeningToSeduction) {
+				PlayReversedAnimation ();
 			}
 		}
 	}
-	private void ChooseSeduction(bool playRev = false){
+	private void ChooseSeduction (bool playRev = false)
+	{
 		int index = Random.Range (0, PatternLibrary.TOTAL_PATTERNS);
 		if (index == _seducePatternIndex) {
-			if(_seducePatternIndex < PatternLibrary.TOTAL_PATTERNS - 1){
+			if (_seducePatternIndex < PatternLibrary.TOTAL_PATTERNS - 1) {
 				index++;
-			}else{
-				index = Random.Range(0,PatternLibrary.TOTAL_PATTERNS - 1);
+			} else {
+				index = Random.Range (0, PatternLibrary.TOTAL_PATTERNS - 1);
 			}
 		}
 		_seducePatternIndex = index;
-		_seduceList.SetList (PatternLibrary.GetPatternByIndex (index,currentDifficulty));
+		_seduceList.SetList (PatternLibrary.GetPatternByIndex (index, currentDifficulty));
 		if (playRev) {
 			PlayReversedAnimation ();
 		}
 	}
 
-	private void PlayReversedAnimation (){
+	private void PlayReversedAnimation ()
+	{
 		for (int i = 0; i < _seduceList.allPartsNeedMoving.Count; i++) {
-			_character.CallPart(_seduceList.allPartsNeedMoving[i]);
-			_character.SetMouth(_seduceList.wantedSoundIndex);
+			_character.CallPart (_seduceList.allPartsNeedMoving [i]);
+			_character.SetMouth (_seduceList.wantedSoundIndex);
 		}
 		if (_seduceList.allPartsNeedMoving.Count == 0) {
-			_character.SetMouth(_seduceList.wantedSoundIndex);
+			_character.SetMouth (_seduceList.wantedSoundIndex);
 		}
 		_timeIdle = 0;
 	}
 
-	private void CheckCorrectMove(){
+	private void CheckCorrectMove ()
+	{
 		if (_listeningToSeduction) {
 			if (_seduceList.CheckIfMatch (_targetCharacter)) {
 				_timesSeduces ++;
-				if(currentDifficulty < 2){
+				if (currentDifficulty < 2) {
 					currentDifficulty ++;
 				}
 				_listeningToSeduction = false;
-				PlayReversedAnimation();
+
+				_timerTransform.gameObject.SetActive (false);
+
+				PlayReversedAnimation ();
 				ChooseSeduction ();
-				_character.MoveToDirection(-1);
-				_targetCharacter.MoveToDirection(1);
+				_character.MoveToDirection (-1);
+				_targetCharacter.MoveToDirection (1);
 				ShowLove ();
 			} else {
 				_timesIncorrectGuess++;
@@ -89,15 +105,28 @@ public class SeduceableTarget : MonoBehaviour {
 			}
 		}
 	}
-	IEnumerator WaitForListen(int seconds = 1){
+	IEnumerator WaitForListen (int seconds = 1)
+	{
 
 		yield return new WaitForSeconds (seconds);
 		PlayReversedAnimation ();
 		_listeningToSeduction = true;
+		_timerTransform.gameObject.SetActive (true);
 	}
-	private void ShowLove(){
+	private void LoseTimerEnd ()
+	{
+		_timerTransform.gameObject.SetActive (false);
+		LoseCondition ();
+	}
+	private void LoseCondition ()
+	{
+
+
+	}
+	private void ShowLove ()
+	{
 		//TODO heart above head and show new pattern after x seconds.
-		Instantiate (Resources.Load<GameObject> ("Prefabs/Heart"), new Vector3 (0,0,-1), Quaternion.identity);
-		StartCoroutine(WaitForListen (2));
+		Instantiate (Resources.Load<GameObject> ("Prefabs/Heart"), new Vector3 (0, 0, -1), Quaternion.identity);
+		StartCoroutine (WaitForListen (2));
 	}
 }
