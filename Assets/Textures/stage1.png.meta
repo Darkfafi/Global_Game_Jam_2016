@@ -1,9 +1,85 @@
 fileFormatVersion: 2
 guid: ad931961247084c53a05c8b921103860
-timeCreated: 1454180610
-licenseType: Free
+timeCreated: 1454185396
+licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: stage1_0
+    21300002: stage1_1
+    21300004: stage1_2
+    21300006: stage1_3
+    21300008: stage1_4
+    21300010: stage1_5
+    21300012: stage1_6
+    21300014: stage1_7
+    21300016: stage1_8
+    21300018: stage1_9
+    21300020: stage1_10
+    21300022: stage1_11
+    21300024: stage1_12
+    21300026: stage1_13
+    21300028: stage1_14
+    21300030: stage1_15
+    21300032: stage1_16
+    21300034: stage1_17
+    21300036: stage1_18
+    21300038: stage1_19
+    21300040: stage1_20
+    21300042: stage1_21
+    21300044: stage1_22
+    21300046: stage1_23
+    21300048: stage1_24
+    21300050: stage1_25
+    21300052: stage1_26
+    21300054: stage1_27
+    21300056: stage1_28
+    21300058: stage1_29
+    21300060: stage1_30
+    21300062: stage1_31
+    21300064: stage1_32
+    21300066: stage1_33
+    21300068: stage1_34
+    21300070: stage1_35
+    21300072: stage1_36
+    21300074: stage1_37
+    21300076: stage1_38
+    21300078: stage1_39
+    21300080: stage1_40
+    21300082: stage1_41
+    21300084: stage1_42
+    21300086: stage1_43
+    21300088: stage1_44
+    21300090: stage1_45
+    21300092: stage1_46
+    21300094: stage1_47
+    21300096: stage1_48
+    21300098: stage1_49
+    21300100: stage1_50
+    21300102: stage1_51
+    21300104: stage1_52
+    21300106: stage1_53
+    21300108: stage1_54
+    21300110: stage1_55
+    21300112: stage1_56
+    21300114: stage1_57
+    21300116: stage1_58
+    21300118: stage1_59
+    21300120: stage1_60
+    21300122: stage1_61
+    21300124: stage1_62
+    21300126: stage1_63
+    21300128: stage1_64
+    21300130: stage1_65
+    21300132: stage1_66
+    21300134: stage1_67
+    21300136: stage1_68
+    21300138: stage1_69
+    21300140: stage1_70
+    21300142: stage1_71
+    21300144: stage1_72
+    21300146: stage1_73
+    21300148: stage1_74
+    21300150: stage1_75
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -17,7 +93,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: 0.25
+    heightScale: .25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -38,19 +114,518 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
-    outline: []
+    sprites:
+    - name: stage1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4440
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_1
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 4440
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 4440
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_3
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 4440
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_4
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 4440
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_5
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 4440
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_6
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 4440
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_7
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 4440
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_8
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 4440
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_9
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 4440
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3330
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_11
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 3330
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_12
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 3330
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_13
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 3330
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_14
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 3330
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_15
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 3330
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_16
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 3330
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_17
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 3330
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_18
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 3330
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_19
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 3330
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2220
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_21
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 2220
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_22
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 2220
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_23
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 2220
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_24
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 2220
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_25
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 2220
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_26
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 2220
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_27
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 2220
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_28
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 2220
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_29
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 2220
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1110
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_31
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1110
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_32
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1110
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_33
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1110
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_34
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1110
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_35
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 1110
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_36
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 1110
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_37
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 1110
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_38
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1110
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_39
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 1110
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_41
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_42
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_43
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_44
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_45
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 0
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_46
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 0
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_47
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 0
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_48
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 0
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stage1_49
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 0
+        width: 450
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

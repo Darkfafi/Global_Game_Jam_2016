@@ -3,6 +3,7 @@ using System.Collections;
 
 public class BlinkEyes : MonoBehaviour
 {
+	public int retardBlinkChance = 30;
 
 	public	Transform LeftEye;
 	public	Transform RightEye;
@@ -14,7 +15,7 @@ public class BlinkEyes : MonoBehaviour
 	
 	IEnumerator BlinkWithEyes ()
 	{
-		
+		int randomBlink = Random.Range (0, 100);
 		yield return new WaitForSeconds (Random.Range (2, 4));
 		
 		LeftEye.localScale = new Vector3 (1, .2f, 1);
@@ -22,6 +23,9 @@ public class BlinkEyes : MonoBehaviour
 		
 		yield return new WaitForSeconds (.2f);
 		LeftEye.localScale = new Vector3 (1, 1, 1);
+		if (randomBlink < retardBlinkChance) {
+			yield return new WaitForSeconds (.1f);
+		}
 		RightEye.localScale = new Vector3 (1, 1, 1);
 		
 		StartCoroutine (BlinkWithEyes ());

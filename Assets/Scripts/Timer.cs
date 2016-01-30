@@ -4,6 +4,9 @@ using System.Collections;
 
 public class Timer : MonoBehaviour
 {
+	public delegate void VoidDelegate ();
+	public event VoidDelegate TimerEnd;
+
 	public Image timerImage;
 	public float timeInSeconds;
 	private float time = 0;
@@ -27,6 +30,9 @@ public class Timer : MonoBehaviour
 		if (time >= timeInSeconds) {
 			print ("TIME GONE");
 			time = 0;
+			if (TimerEnd != null) {
+				TimerEnd ();
+			}
 		}
 	}
 }

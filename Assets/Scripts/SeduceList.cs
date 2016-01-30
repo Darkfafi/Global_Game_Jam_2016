@@ -30,13 +30,14 @@ public class SeduceList : MonoBehaviour {
 		if (matches == allPartsNeedMoving.Count) {
 			match = true;
 		}
-		//if (match && wantedSoundIndex != 0) {
+		if (match && wantedSoundIndex != 0) {
 			targetSourceClip = character.GetComponent<AudioSource> ();
-		//targetSourceClip.isPlaying
-			if(targetSourceClip.clip == null || (character.GetIndexOfAudio(targetSourceClip.clip) + 1) != wantedSoundIndex){ // BECAUSE 0 == DEFAULT == NO SOUND
+			if(targetSourceClip.clip == null 
+			   || ((character.GetIndexOfAudio(targetSourceClip.clip) + 1) != wantedSoundIndex 
+			    || (character.GetIndexOfAudio(targetSourceClip.clip) + 1) == wantedSoundIndex && !targetSourceClip.isPlaying)){ // BECAUSE 0 == DEFAULT == NO SOUND
 				match = false;
 			}
-		//}
+		}
 		return match;
 	}
 
