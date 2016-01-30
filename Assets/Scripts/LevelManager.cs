@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour {
         Instance = this;
         DontDestroyOnLoad(this.gameObject);
 
-        UnlockedLevel = 1;
+        UnlockedLevel = 4;
 		// TODO playerprefs
     }
 

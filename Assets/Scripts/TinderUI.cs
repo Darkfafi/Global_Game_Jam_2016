@@ -64,7 +64,9 @@ public class TinderUI : MonoBehaviour
 
         backgrounds[_indexToSwap].transform.DOScale(transform.localScale * 1.1f, 0.8f).SetEase(Ease.OutCubic);
 
-		for (int i = 0; i < levels.Count; i++)
+        levels[_indexToSwap].like.SetActive(true);
+
+        for (int i = 0; i < levels.Count; i++)
         {
 
             if (i != _indexToSwap)
@@ -95,6 +97,7 @@ public class TinderUI : MonoBehaviour
 
             matches[_indexToSwap].transform.DOMove(matches[_indexToSwap].transform.position, 0f).SetDelay(3f).OnComplete(MatchCompleted);
 
+            levels[_indexToSwap].GetComponent<AudioSource>().Play();
 
         }
 		else
@@ -103,6 +106,8 @@ public class TinderUI : MonoBehaviour
 
 			levels[_indexToSwap].transform.position = pos;
 			levels[_indexToSwap].transform.rotation = rot;
+
+			levels[_indexToSwap].like.SetActive(false);
 
 			_indexToSwap--;
 			if (_indexToSwap == -1)
@@ -137,6 +142,8 @@ public class TinderUI : MonoBehaviour
 
         backgrounds[_indexToSwap].transform.SetAsFirstSibling();
 
+        levels[_indexToSwap].dislike.SetActive(true);
+
 
         //next frame
     }
@@ -149,6 +156,8 @@ public class TinderUI : MonoBehaviour
 
         levels[_indexToSwap].transform.position = pos;
         levels[_indexToSwap].transform.rotation = rot;
+
+        levels[_indexToSwap].dislike.SetActive(false);
 
 
         _indexToSwap--;
