@@ -77,7 +77,7 @@ public class TinderUI : MonoBehaviour
 
 		_indexToSwap--;
 		if (_indexToSwap == -1) {
-			_indexToSwap = 3;
+			_indexToSwap = levels.Count - 1;
 		}
 	}
 }
