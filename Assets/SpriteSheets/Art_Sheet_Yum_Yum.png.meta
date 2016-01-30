@@ -1,9 +1,35 @@
 fileFormatVersion: 2
 guid: f14c3d20d80104a15b30d832607730fa
-timeCreated: 1454155347
-licenseType: Free
+timeCreated: 1454167697
+licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Art_Sheet_Yum_Yum_0
+    21300002: Art_Sheet_Yum_Yum_1
+    21300004: Art_Sheet_Yum_Yum_2
+    21300006: Art_Sheet_Yum_Yum_3
+    21300008: Art_Sheet_Yum_Yum_4
+    21300010: Art_Sheet_Yum_Yum_5
+    21300012: Art_Sheet_Yum_Yum_6
+    21300014: Art_Sheet_Yum_Yum_7
+    21300016: Art_Sheet_Yum_Yum_8
+    21300018: Art_Sheet_Yum_Yum_9
+    21300020: Art_Sheet_Yum_Yum_10
+    21300022: Art_Sheet_Yum_Yum_11
+    21300024: Art_Sheet_Yum_Yum_12
+    21300026: Art_Sheet_Yum_Yum_13
+    21300028: Art_Sheet_Yum_Yum_14
+    21300030: Art_Sheet_Yum_Yum_15
+    21300032: Art_Sheet_Yum_Yum_16
+    21300034: Art_Sheet_Yum_Yum_17
+    21300036: Art_Sheet_Yum_Yum_18
+    21300038: Art_Sheet_Yum_Yum_19
+    21300040: Art_Sheet_Yum_Yum_20
+    21300042: Art_Sheet_Yum_Yum_21
+    21300044: Art_Sheet_Yum_Yum_22
+    21300046: Art_Sheet_Yum_Yum_23
+    21300048: Art_Sheet_Yum_Yum_24
+    21300050: Art_Sheet_Yum_Yum_25
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -17,7 +43,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: 0.25
+    heightScale: .25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -30,7 +56,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,19 +64,278 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
-    outline: []
+    sprites:
+    - name: Art_Sheet_Yum_Yum_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 762
+        width: 191
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_1
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 781
+        width: 129
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_2
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 532
+        width: 365
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 644
+        width: 70
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_4
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 486
+        width: 155
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_5
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 654
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_6
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 654
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_7
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 557
+        width: 72
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_8
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 594
+        width: 70
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_9
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 435
+        width: 64
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_10
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 77
+        width: 365
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_11
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 311
+        width: 97
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_12
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 344
+        width: 65
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_13
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 346
+        width: 65
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_14
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 196
+        width: 39
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_15
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 250
+        width: 70
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_16
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 260
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_17
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 46
+        width: 53
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_18
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 261
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_19
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 194
+        width: 78
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_20
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 150
+        width: 57
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_21
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 164
+        width: 65
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_22
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 100
+        width: 67
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_23
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 68
+        width: 36
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_24
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 63
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Yum_Yum_25
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 60
+        width: 48
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

@@ -1,9 +1,28 @@
 fileFormatVersion: 2
 guid: 03c5832d419ab47b08d69aee39b29a9b
-timeCreated: 1454155344
-licenseType: Free
+timeCreated: 1454168178
+licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Art_Sheet_Skolo_0
+    21300002: Art_Sheet_Skolo_1
+    21300004: Art_Sheet_Skolo_2
+    21300006: Art_Sheet_Skolo_3
+    21300008: Art_Sheet_Skolo_4
+    21300010: Art_Sheet_Skolo_5
+    21300012: Art_Sheet_Skolo_6
+    21300014: Art_Sheet_Skolo_7
+    21300016: Art_Sheet_Skolo_8
+    21300018: Art_Sheet_Skolo_9
+    21300020: Art_Sheet_Skolo_10
+    21300022: Art_Sheet_Skolo_11
+    21300024: Art_Sheet_Skolo_12
+    21300026: Art_Sheet_Skolo_13
+    21300028: Art_Sheet_Skolo_14
+    21300030: Art_Sheet_Skolo_15
+    21300032: Art_Sheet_Skolo_16
+    21300034: Art_Sheet_Skolo_17
+    21300036: Art_Sheet_Skolo_18
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -17,7 +36,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: 0.25
+    heightScale: .25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -26,11 +45,11 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,19 +57,208 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
-    outline: []
+    sprites:
+    - name: Art_Sheet_Skolo_0
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 852
+        width: 251
+        height: 134
+      alignment: 9
+      pivot: {x: .886120677, y: .149330705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Skolo_1
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 860
+        width: 253
+        height: 134
+      alignment: 9
+      pivot: {x: .875330031, y: .171247333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Skolo_2
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 777
+        width: 145
+        height: 63
+      alignment: 9
+      pivot: {x: .871327341, y: .546616316}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Skolo_3
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 650
+        width: 95
+        height: 89
+      alignment: 9
+      pivot: {x: .695790529, y: .401004404}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Skolo_4
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 649
+        width: 116
+        height: 105
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Skolo_5
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 682
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Skolo_6
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 377
+        width: 141
+        height: 210
+      alignment: 9
+      pivot: {x: .194511473, y: .131727383}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Skolo_7
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 520
+        width: 112
+        height: 96
+      alignment: 9
+      pivot: {x: .770960391, y: .520395279}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Skolo_8
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 537
+        width: 225
+        height: 84
+      alignment: 9
+      pivot: {x: .421683758, y: .511654079}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Skolo_9
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 243
+        width: 169
+        height: 108
+      alignment: 9
+      pivot: {x: .14665024, y: .654094577}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Skolo_10
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 324
+        width: 142
+        height: 170
+      alignment: 9
+      pivot: {x: .872277498, y: .131453037}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Skolo_11
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 259
+        width: 197
+        height: 250
+      alignment: 9
+      pivot: {x: .29625845, y: .644884884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Skolo_12
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 24
+        width: 278
+        height: 165
+      alignment: 9
+      pivot: {x: .123208955, y: .802585304}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Skolo_13
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 184
+        width: 107
+        height: 100
+      alignment: 9
+      pivot: {x: .84766537, y: .734948754}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Skolo_14
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 127
+        width: 107
+        height: 101
+      alignment: 9
+      pivot: {x: .198080182, y: .732622206}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Skolo_15
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 80
+        width: 91
+        height: 79
+      alignment: 9
+      pivot: {x: .155752659, y: .83457911}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Skolo_16
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 41
+        width: 91
+        height: 79
+      alignment: 9
+      pivot: {x: .876520514, y: .846970856}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Skolo_17
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 31
+        width: 61
+        height: 24
+      alignment: 9
+      pivot: {x: .788871408, y: .663161457}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Skolo_18
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 5
+        width: 61
+        height: 23
+      alignment: 9
+      pivot: {x: .211128607, y: .755378544}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
