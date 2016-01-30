@@ -23,6 +23,8 @@ public class TinderUI : MonoBehaviour
 	private Sequence likeSequence;
 	private Sequence dislikeSequence;
 
+
+	bool AxisAllowed = true;
 	// Use this for initialization
 	void Start ()
 	{
@@ -38,34 +40,47 @@ public class TinderUI : MonoBehaviour
 
 	void Update ()
 	{
-		if (InputManager.Instance.GetAButton ()) {
+		if (InputManager.Instance.GetAButtonDown ()) {
 			Liked ();
 		}
 
-		if (InputManager.Instance.GetBButton ()) {
+		if (InputManager.Instance.GetBButtonDown ()) {
 			Disliked ();
 		}
 
 #if UNITY_WINDOWS
-		if(Input.GetAxis("LeftTriggerWin") < -.5f)
+		if(Input.GetAxis("LeftTriggerWin") < -.4f)
 		{
 			Disliked();
 		}
 
-		if(Input.GetAxis("LeftTriggerWin") > .5f)
+		if(Input.GetAxis("LeftTriggerWin") > .4f)
 		{
 			Liked();
 		}
 #else
-		if (Input.GetAxis ("LeftTriggerMac") < -.5f) {
-			Disliked ();
-		}
+		if (AxisAllowed) {
+			if (Input.GetAxis ("Horizontal") < -.8f) {
+				Disliked ();
+				StartCoroutine (DelayResetAxis ());
+			}
 
-		if (Input.GetAxis ("LeftTriggerMac") > .5f) {
-			Liked ();
+			if (Input.GetAxis ("Horizontal") > .8f) {
+				Liked ();
+				StartCoroutine (DelayResetAxis ());
+			}
 		}
 #endif
+		//	Debug.Log (Input.GetAxis ("LeftTriggerMac") + "     " + Input.GetAxis ("RightTriggerMac"));
 
+
+	}
+
+	IEnumerator DelayResetAxis ()
+	{
+		AxisAllowed = false;
+		yield return new WaitForSeconds (.3f);
+		AxisAllowed = true;
 	}
 
 
