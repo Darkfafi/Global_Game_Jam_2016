@@ -42,6 +42,11 @@ public class PCcharacter : MonoBehaviour
 	public Transform loveFX;
 	public Transform moveFX;
 
+
+	public bool allowedToPlay = true;
+
+	bool playCoroutine = true;
+
 	void Start ()
 	{
 		StartCoroutine (BlinkEyes ());
@@ -153,46 +158,70 @@ public class PCcharacter : MonoBehaviour
 
 		//debug reasons
 		//chosenMove = 0;
+		if (allowedToPlay) {
 
-		switch (chosenMove) {
-		case 0:
+			if (playCoroutine) {
+				StartCoroutine (DelayActiveMove ());
+				playCoroutine = false;
+			}
+
+			switch (chosenMove) {
+			case 0:
 		//	if (LeftLegUpper.GetComponent<Animation> () ["LeftUpperArm"].time < LeftLegUpper.GetComponent<Animation> ().clip.length / 2) {
-			SetMouth (3);
-			LeftArmUpper.GetComponent<Animation> ().Play ();
+				SetMouth (3);
+				LeftArmUpper.GetComponent<Animation> ().Play ();
 				//	LeftArmLower.GetComponent<Animation> ().Play ();
-			RightLegUpper.GetComponent<Animation> ().Play ();
+				RightLegUpper.GetComponent<Animation> ().Play ();
 		//	}
 
-			break;
-		case 1:
+				break;
+			case 1:
 
 		//	if (LeftLegUpper.GetComponent<Animation> () ["LeftUpperArm"].time < LeftLegUpper.GetComponent<Animation> ().clip.length / 2) {
-			SetMouth (4);
-			LeftArmUpper.GetComponent<Animation> ().Play ();
+				SetMouth (4);
+				LeftArmUpper.GetComponent<Animation> ().Play ();
 				//	LeftArmLower.GetComponent<Animation> ().Play ();
-			LeftLegUpper.GetComponent<Animation> ().Play ();
+				LeftLegUpper.GetComponent<Animation> ().Play ();
 		//	}
-			break;
-		case 2:
+				break;
+			case 2:
 		//	if (RightLegUpper.GetComponent<Animation> () ["RightUpperArm"].time < RightLegUpper.GetComponent<Animation> ().clip.length / 2) {
-			SetMouth (2);
-			LeftArmUpper.GetComponent<Animation> ().Play ();
+				SetMouth (2);
+				LeftArmUpper.GetComponent<Animation> ().Play ();
 				//	LeftArmLower.GetComponent<Animation> ().Play ();
-			RightLegUpper.GetComponent<Animation> ().Play ();
+				RightLegUpper.GetComponent<Animation> ().Play ();
 		//	}
-			break;
-		case 3:
+				break;
+			case 3:
 		//	if (LeftLegUpper.GetComponent<Animation> () ["LeftUpperArm"].time < LeftLegUpper.GetComponent<Animation> ().clip.length / 2) {
 
-			SetMouth (1);
-			RightArmUpper.GetComponent<Animation> ().Play ();
+				SetMouth (1);
+				RightArmUpper.GetComponent<Animation> ().Play ();
 				//	RightArmLower.GetComponent<Animation> ().Play ();
-			LeftLegUpper.GetComponent<Animation> ().Play ();
+				LeftLegUpper.GetComponent<Animation> ().Play ();
 		//	}
-			break;
+				break;
+			}
+		} else {
+			RightArmUpper.GetComponent<Animation> ().Stop ();
+			LeftArmUpper.GetComponent<Animation> ().Stop ();
+			RightLegUpper.GetComponent<Animation> ().Stop ();
+			LeftLegUpper.GetComponent<Animation> ().Stop ();
 		}
 
 		StartCoroutine (ResetMove ());
+	}
+
+	IEnumerator DelayActiveMove ()
+	{
+
+		yield return new WaitForSeconds (.4f);
+		allowedToPlay = false;
+
+		yield return new WaitForSeconds (2.4f);
+
+		allowedToPlay = true;
+		playCoroutine = true;
 	}
 
 	IEnumerator ResetMove ()
