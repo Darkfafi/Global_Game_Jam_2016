@@ -148,7 +148,7 @@ public class SeduceableTarget : MonoBehaviour
 	}
 	private void ShowLove ()
 	{
-		GetComponent<Animation> ().Play ("hopjump");
+		//GetComponent<Animation> ().Play ("hopjump");
 		_character.MoveToDirection (-1);
 		_targetCharacter.MoveToDirection (1);
 		_position ++;
