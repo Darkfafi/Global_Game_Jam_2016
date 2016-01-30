@@ -8,6 +8,11 @@ public class Timer : MonoBehaviour
 	public float timeInSeconds;
 	private float time = 0;
 
+	void OnEnable ()
+	{
+
+	}
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -21,7 +26,7 @@ public class Timer : MonoBehaviour
 		timerImage.fillAmount = time / timeInSeconds;
 		if (time >= timeInSeconds) {
 			print ("TIME GONE");
-			time = timeInSeconds;
+			time = 0;
 		}
 	}
 }
