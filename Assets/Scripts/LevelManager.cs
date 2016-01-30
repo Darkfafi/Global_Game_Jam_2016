@@ -27,7 +27,7 @@ public class LevelManager : MonoBehaviour {
     public void ChooseLevel(int level, int totalLevels)
 	{
         int levelToCheck = totalLevels - level;
-        if (levelToCheck > UnlockedLevel)
+        if (!MayChooseLevel(level, totalLevels))
 		{
             print("no match aka level locked: "+levelToCheck);
             return;
@@ -36,7 +36,18 @@ public class LevelManager : MonoBehaviour {
         Application.LoadLevel("Level" + levelToCheck);
     }
 
-	// Call this when your level is completed!!
+    public bool MayChooseLevel(int level, int totalLevels)
+    {
+        int levelToCheck = totalLevels - level;
+        if (levelToCheck > UnlockedLevel)
+        {
+            print("no match aka level locked: " + levelToCheck);
+            return false;
+        }
+        return true;
+    }
+
+    // Call this when your level is completed!!
     public void LevelCompleted()
 	{
 		if (_currentPlayedLevel == 0)
