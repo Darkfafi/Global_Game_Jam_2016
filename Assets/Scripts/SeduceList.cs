@@ -15,7 +15,7 @@ public class SeduceList : MonoBehaviour {
 	public bool CheckIfMatch(Character character){
 		bool match = false;
 		List<Transform> list = character.characterData.GetAllContolledParts ();
-		AudioClip targetClip = null;
+		AudioSource targetSourceClip = null;
 		int matches = 0;
 		for (int j = 0; j < list.Count; j++) {
 			if(list[j].GetComponent<Animation>().isPlaying){
@@ -30,12 +30,13 @@ public class SeduceList : MonoBehaviour {
 		if (matches == allPartsNeedMoving.Count) {
 			match = true;
 		}
-		if (match && wantedSoundIndex != 0) {
-			targetClip = character.GetComponent<AudioSource> ().clip;
-			if(targetClip == null || (character.GetIndexOfAudio(targetClip) + 1) != wantedSoundIndex){ // BECAUSE 0 == DEFAULT == NO SOUND
+		//if (match && wantedSoundIndex != 0) {
+			targetSourceClip = character.GetComponent<AudioSource> ();
+		//targetSourceClip.isPlaying
+			if(targetSourceClip.clip == null || (character.GetIndexOfAudio(targetSourceClip.clip) + 1) != wantedSoundIndex){ // BECAUSE 0 == DEFAULT == NO SOUND
 				match = false;
 			}
-		}
+		//}
 		return match;
 	}
 

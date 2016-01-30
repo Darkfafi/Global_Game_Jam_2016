@@ -13,6 +13,7 @@ public class Character : MonoBehaviour{
 	private void Awake(){
 		_characterData = gameObject.GetComponent<CharacterData> ();
 		GetComponent<Animation> ().Play ();
+		SetMouth (Random.Range(1,3));
 	}
 
 	public CharacterData characterData{
