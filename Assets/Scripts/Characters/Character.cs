@@ -12,6 +12,9 @@ public class Character : MonoBehaviour
 	private Vector2 _differents;
 	private int _directionMoving = 0;
 
+	[SerializeField]
+	private Transform _heartAnimation;
+
 	private CharacterData _characterData;
 	[SerializeField]
 	private List<AudioClip>
@@ -83,6 +86,12 @@ public class Character : MonoBehaviour
 		//gameObject.GetComponent<Animation> ().Play();
 		GetComponent<Animation> ().Play ("hopjump");
 
+		Invoke ("ShowHearts", 1);
+	}
+
+	void ShowHearts ()
+	{
+		_heartAnimation.gameObject.SetActive (true);
 	}
 
 	void Update ()
@@ -94,6 +103,8 @@ public class Character : MonoBehaviour
 				transform.position = _destination;
 				_directionMoving = 0;
 				GetComponent<Animation> ().Play ("idle2");
+
+				_heartAnimation.gameObject.SetActive (false);
 				//gameObject.GetComponent<Animation> ().clip = _idleAnimation;
 				//gameObject.GetComponent<Animation> ().Play();
 			}
