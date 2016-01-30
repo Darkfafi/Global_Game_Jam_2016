@@ -73,7 +73,7 @@ public class SeduceableTarget : MonoBehaviour
 	private void PlayReversedAnimation ()
 	{
 		for (int i = 0; i < _seduceList.allPartsNeedMoving.Count; i++) {
-			_character.CallPart (_seduceList.allPartsNeedMoving [i]);
+			_character.CallPart (_seduceList.GetReversedMovement (_seduceList.allPartsNeedMoving [i]));
 			_character.SetMouth (_seduceList.wantedSoundIndex);
 		}
 		if (_seduceList.allPartsNeedMoving.Count == 0) {
