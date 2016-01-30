@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
 	public Transform fadeToBlack;
 
+	public Transform loveFX;
+
 	void Awake ()
 	{
 		if (Instance != null) {
@@ -32,6 +34,7 @@ public class GameManager : MonoBehaviour
 
 	IEnumerator DelayLoadLevel ()
 	{
+		loveFX.gameObject.SetActive (true);
 		yield return new WaitForSeconds (2);
 		fadeToBlack.gameObject.SetActive (true);
 		yield return new WaitForSeconds (5);
