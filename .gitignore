@@ -21,5 +21,6 @@
 sysinfo.txt
 
 ProjectSettings/ProjectSettings.asset
+/ProjectSettings/ProjectSettings.asset
 
 .vscode/launch.json

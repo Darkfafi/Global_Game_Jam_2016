@@ -14,18 +14,22 @@ public class SeduceableTarget : MonoBehaviour
 		_timerTransform;
 
 	public int baseDificulty = 0;
-	public int currentDifficulty = 0;
+	public float currentDifficulty = 0;
 
 	private SeduceList _seduceList;
 	private int _seducePatternIndex = 0;
 
-	private int _timesSeduces = 0;
+	private int _timesSeducesInRow = 0;
+	private int _timesTimerDownInRow = 0;
+
 	private int _timesIncorrectGuess = 0;
 	private int _timesTolorateIncorrect = 2;
 
 	private bool _listeningToSeduction = false;
 
 	private float _timeIdle = 0;
+
+	private int _position = 0;
 
 	void Start ()
 	{
@@ -60,7 +64,7 @@ public class SeduceableTarget : MonoBehaviour
 			}
 		}
 		_seducePatternIndex = index;
-		_seduceList.SetList (PatternLibrary.GetPatternByIndex (index, currentDifficulty));
+		_seduceList.SetList (PatternLibrary.GetPatternByIndex (index, Mathf.RoundToInt(currentDifficulty)));
 		if (playRev) {
 			PlayReversedAnimation ();
 		}
@@ -82,19 +86,9 @@ public class SeduceableTarget : MonoBehaviour
 	{
 		if (_listeningToSeduction) {
 			if (_seduceList.CheckIfMatch (_targetCharacter)) {
-				_timesSeduces ++;
-				if (currentDifficulty < 2) {
-					currentDifficulty ++;
-				}
 				_listeningToSeduction = false;
-
 				_timerTransform.gameObject.SetActive (false);
-
-				PlayReversedAnimation ();
-				ChooseSeduction ();
-				_character.MoveToDirection (-1);
-				_targetCharacter.MoveToDirection (1);
-				ShowLove ();
+				WinCondition();
 			} else {
 				_timesIncorrectGuess++;
 				if (_timesIncorrectGuess == _timesTolorateIncorrect) {
@@ -118,15 +112,50 @@ public class SeduceableTarget : MonoBehaviour
 		_timerTransform.gameObject.SetActive (false);
 		LoseCondition ();
 	}
+	private void WinCondition(){
+		_timesSeducesInRow ++;
+		_timesTimerDownInRow = 0;
+		if (currentDifficulty < 2) {
+			currentDifficulty += 0.5f;
+		}
+		_timerTransform.GetComponent<Timer> ().Reset();
+		_listeningToSeduction = false;
+		PlayReversedAnimation ();
+		ChooseSeduction ();
+		ShowLove ();
+		if (_position == 4) {
+			Debug.Log ("Win"); //TODO Show WIN effect and go back to menu.
+		} else {
+			StartCoroutine (WaitForListen (2));
+		}
+	}
 	private void LoseCondition ()
 	{
-
-
+		_timesTimerDownInRow++;
+		_timesSeducesInRow = 0;
+		if (currentDifficulty > baseDificulty) {
+			currentDifficulty -= 0.5f;
+		}
+		_listeningToSeduction = false;
+		ChooseSeduction ();
+		ShowHate ();
+		if (_position == -4) {
+			Debug.Log ("End"); //TODO Show LOSE effect and go back to menu.
+		} else {
+			StartCoroutine (WaitForListen (2));
+		}
 	}
 	private void ShowLove ()
 	{
-		//TODO heart above head and show new pattern after x seconds.
+		_character.MoveToDirection (-1);
+		_targetCharacter.MoveToDirection (1);
+		_position ++;
 		Instantiate (Resources.Load<GameObject> ("Prefabs/Heart"), new Vector3 (0, 0, -1), Quaternion.identity);
-		StartCoroutine (WaitForListen (2));
+	}
+	private void ShowHate(){
+		_character.MoveToDirection (1);
+		_targetCharacter.MoveToDirection (-1);
+		_position --;
+		Instantiate (Resources.Load<GameObject> ("Prefabs/Wrong"), new Vector3 (0, 0, -1), Quaternion.identity);
 	}
 }
