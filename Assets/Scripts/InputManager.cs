@@ -18,96 +18,157 @@ public class InputManager : MonoBehaviour
 		}
 	}
 
-
 	public bool GetAButton ()
 	{
-		#if UNITY_WINDWOWS || UNITY_EDITOR
+		Debug.Log ("A pressed");
+		#if UNITY_WINDWOWS 
 		return Input.GetKey (KeyCode.Joystick1Button0);
-		#endif
-			
-		#if UNITY_EDITOR_OSX ||  UNITY_STANDALONE_OSX
+		#else
 		return Input.GetKey (KeyCode.Joystick1Button16);
 		#endif
 	}
 
 	public bool GetBButton ()
 	{
-		#if UNITY_WINDWOWS || UNITY_EDITOR
+		Debug.Log ("B pressed");
+		#if UNITY_WINDWOWS 
 		return Input.GetKey (KeyCode.Joystick1Button1);
-		#endif
-			
-		#if UNITY_EDITOR_OSX ||  UNITY_STANDALONE_OSX
+		#else
 		return Input.GetKey (KeyCode.Joystick1Button17);
 		#endif
 	}
 
-
 	public bool GetXButton ()
 	{
-		#if UNITY_WINDWOWS || UNITY_EDITOR
+		Debug.Log ("X pressed");
+		#if UNITY_WINDWOWS 
 		return Input.GetKey (KeyCode.Joystick1Button2);
-		#endif
-			
-		#if UNITY_EDITOR_OSX ||  UNITY_STANDALONE_OSX
+		#else
 		return Input.GetKey (KeyCode.Joystick1Button18);
 		#endif
 	}
 
-
 	public bool GetYButton ()
 	{
-		#if UNITY_WINDWOWS || UNITY_EDITOR
+		Debug.Log ("Y pressed");
+		#if UNITY_WINDWOWS 
 		return Input.GetKey (KeyCode.Joystick1Button3);
-		#endif
-		
-		#if UNITY_EDITOR_OSX ||  UNITY_STANDALONE_OSX
+		#else
 		return Input.GetKey (KeyCode.Joystick1Button19);
 		#endif
 	}
 
-	/*
-	public float GetLeftBumberButton ()
+
+	public bool GetLeftBumberButton ()
 	{
-		#if UNITY_WINDWOWS || UNITY_EDITOR
+		#if UNITY_WINDWOWS 
 		return Input.GetKey (KeyCode.Joystick1Button4);
-		#endif
-		
-		#if UNITY_EDITOR_OSX ||  UNITY_STANDALONE_OSX
+		#else
 		return Input.GetKey (KeyCode.Joystick1Button13);
 		#endif
 	}
 
 
-	public float GetRightBumberButton ()
+	public bool GetRightBumberButton ()
 	{
-		#if UNITY_WINDWOWS || UNITY_EDITOR
-		return Input.GetAxis(
+		#if UNITY_WINDWOWS 
+		return Input.GetKey (KeyCode.Joystick1Button3);
+		#else
+		return Input.GetKey (KeyCode.Joystick1Button14);
 		#endif
-		
-		#if UNITY_EDITOR_OSX ||  UNITY_STANDALONE_OSX
+	}
+
+
+	public bool GetAButtonDown ()
+	{
+		Debug.Log ("A pressed");
+		#if UNITY_WINDWOWS 
+		return Input.GetKey (KeyCode.Joystick1Button0);
+		#else
+		return Input.GetKey (KeyCode.Joystick1Button16);
+		#endif
+	}
+	
+	public bool GetBButtonDown ()
+	{
+		Debug.Log ("B pressed");
+		#if UNITY_WINDWOWS 
+		return Input.GetKeyDown (KeyCode.Joystick1Button1);
+		#else
+		return Input.GetKeyDown (KeyCode.Joystick1Button17);
+		#endif
+	}
+	
+	public bool GetXButtonDown ()
+	{
+		Debug.Log ("X pressed");
+		#if UNITY_WINDWOWS 
+		return Input.GetKeyDown (KeyCode.Joystick1Button2);
+		#else
+		return Input.GetKeyDown (KeyCode.Joystick1Button18);
+		#endif
+	}
+	
+	public bool GetYButtonDown ()
+	{
+		Debug.Log ("Y pressed");
+		#if UNITY_WINDWOWS 
+		return Input.GetKeyDown (KeyCode.Joystick1Button3);
+		#else
+		return Input.GetKeyDown (KeyCode.Joystick1Button19);
+		#endif
+	}
+	
+	
+	public bool GetLeftBumberButtonDown ()
+	{
+		#if UNITY_WINDWOWS 
+		return Input.GetKeyDown (KeyCode.Joystick1Button4);
+		#else
+		return Input.GetKeyDown (KeyCode.Joystick1Button13);
+		#endif
+	}
+	
+	
+	public bool GetRightBumberButtonDown ()
+	{
+		#if UNITY_WINDWOWS 
+		return Input.GetKeyDown (KeyCode.Joystick1Button3);
+		#else
+		return Input.GetKeyDown (KeyCode.Joystick1Button14);
+		#endif
+	}
+
+
+	/*
+	public bool GetLeftTriggerButton ()
+	{
+		#if UNITY_WINDWOWS 
+		return Input.GetKey (KeyCode.Joystick1Button4);
+		#else
+		return Input.GetKey (KeyCode.Joystick1Button13);
+		#endif
+	}
+	
+	
+	public bool GetRightTriggerButton ()
+	{
+		#if UNITY_WINDWOWS 
+		return Input.GetKey (KeyCode.Joystick1Button3);
+		#else
 		return Input.GetKey (KeyCode.Joystick1Button14);
 		#endif
 	}
 */
 
 
+
 	void Update ()
 	{
-	
-		if (Input.GetAxis ("Horizontal") > .1f || Input.GetAxis ("Horizontal") < -.1f) {
-			Debug.Log ("test x: " + Input.GetAxis ("Horizontal"));
+
+
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			Application.Quit ();
 		}
-
-		if (Input.GetAxis ("Vertical") > .1f || Input.GetAxis ("Vertical") < -.1f) {
-			Debug.Log ("test y: " + Input.GetAxis ("Vertical"));
-		}
-
-
-
-
-
-
-
-
 	}
 }
