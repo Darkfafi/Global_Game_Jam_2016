@@ -8,14 +8,21 @@ public class SeduceableTarget : MonoBehaviour {
 	private SeduceList _seduceList;
 	private int _seducePatternIndex = 0;
 
+	private int _timesSeduces = 0;
+	private int _timesIncorrectGuess = 0;
+	private int _timesTolorateIncorrect = 2;
+
+	private bool _listeningToSeduction = false;
+
 	void Start(){
 		_character = gameObject.GetComponent<Character> ();
 		_seduceList = gameObject.GetComponent<SeduceList> ();
 		_targetCharacter.DidMove += CheckCorrectMove;
-		ChooseSeduction (42); //Difficulty has no fucntion yet..
+		ChooseSeduction (); //Difficulty has no fucntion yet..
+		StartCoroutine(WaitForListen (3));
 	}
 
-	private void ChooseSeduction(int difficulty){
+	private void ChooseSeduction(bool playRev = false){
 		int index = Random.Range (0, PatternLibrary.TOTAL_PATTERNS);
 		if (index == _seducePatternIndex) {
 			if(_seducePatternIndex < PatternLibrary.TOTAL_PATTERNS - 1){
@@ -26,22 +33,42 @@ public class SeduceableTarget : MonoBehaviour {
 		}
 		_seducePatternIndex = index;
 		_seduceList.SetList (PatternLibrary.GetPatternByIndex (index));
-
-		PlayReversedAnimation ();
+		if (playRev) {
+			PlayReversedAnimation ();
+		}
 	}
 
 	private void PlayReversedAnimation (){
 		for (int i = 0; i < _seduceList.allPartsNeedMoving.Count; i++) {
-			_character.CallPart(_seduceList.GetReversedMovement(_seduceList.allPartsNeedMoving[i]));
+			_character.CallPart(_seduceList.allPartsNeedMoving[i]);
 			_character.SetMouth(_seduceList.GetReversedAudio(_seduceList.wantedSoundIndex));
 		}
 	}
 
 	private void CheckCorrectMove(){
 		if (_seduceList.CheckIfMatch (_targetCharacter)) {
-			Debug.Log ("LOVVEE");
+			_timesSeduces ++;
+			_listeningToSeduction = false;
+			ChooseSeduction();
+			ShowLove();
 		} else {
-			Debug.Log("No Love..");
+			_timesIncorrectGuess++;
+			if(_timesIncorrectGuess == _timesTolorateIncorrect){
+				PlayReversedAnimation();
+				_timesIncorrectGuess = 0;
+				_timesTolorateIncorrect = Random.Range(3,6);
+			}
 		}
+	}
+	IEnumerator WaitForListen(int seconds = 1){
+
+		yield return new WaitForSeconds (seconds);
+		PlayReversedAnimation ();
+		_listeningToSeduction = true;
+	}
+	private void ShowLove(){
+		//TODO heart above head and show new pattern after x seconds.
+		Instantiate (Resources.Load<GameObject> ("Prefabs/Heart"), new Vector3 (), Quaternion.identity);
+		StartCoroutine(WaitForListen (3));
 	}
 }
