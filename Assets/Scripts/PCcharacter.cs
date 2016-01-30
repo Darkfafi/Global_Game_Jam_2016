@@ -10,7 +10,6 @@ public class PCcharacter : MonoBehaviour
 	public Transform LeftArmUpper;
 	public Transform LeftArmLower;
 
-
 	public Transform RightLegUpper;
 	public Transform RightLegLower;
 	public Transform RightFoot;
@@ -30,7 +29,13 @@ public class PCcharacter : MonoBehaviour
 
 	bool MouthBeingPressed = false;
 
+	bool DoingMove = false;
+
 	public AudioClip[] Sounds;
+
+	public Transform heartPlaceholder;
+
+	int chosenMove = 0;
 
 	void Start ()
 	{
@@ -47,6 +52,7 @@ public class PCcharacter : MonoBehaviour
 			m = 1; 
 		}
 		GetComponent<AudioSource> ().clip = Sounds [m - 1];
+		GetComponent<AudioSource> ().pitch = Random.Range (.7f, 1.4f);
 		GetComponent<AudioSource> ().Play ();
 
 		for (int i = 0; i < mouth.Length; i++) {
@@ -82,56 +88,117 @@ public class PCcharacter : MonoBehaviour
 	IEnumerator RandomAnimation ()
 	{
 
-		yield return new WaitForSeconds (Random.Range (.5f, 1.5f));
+		yield return new WaitForSeconds (Random.Range (.9f, 1.5f));
 
 		Debug.Log ("do random animation");
 
-		switch (Random.Range (0, 8)) {
-		case 0:
-			RightArmUpper.GetComponent<Animation> ().Play ();
-			RightArmLower.GetComponent<Animation> ().Play ();
-			break;
-		case 1:
-			LeftArmUpper.GetComponent<Animation> ().Play ();
-			LeftArmLower.GetComponent<Animation> ().Play ();
-			break;
+		if (!DoingMove) {
+			switch (Random.Range (0, 10)) {
+			case 0:
+				RightArmUpper.GetComponent<Animation> ().Play ();
+				RightArmLower.GetComponent<Animation> ().Play ();
+				break;
+			case 1:
+				LeftArmUpper.GetComponent<Animation> ().Play ();
+				LeftArmLower.GetComponent<Animation> ().Play ();
+				break;
 
 
-		case 2:
-			RightLegUpper.GetComponent<Animation> ().Play ();
-			break;
+			case 2:
+				RightLegUpper.GetComponent<Animation> ().Play ();
+				break;
 
 
-		case 3:
-			LeftLegUpper.GetComponent<Animation> ().Play ();
-			break;
+			case 3:
+				LeftLegUpper.GetComponent<Animation> ().Play ();
+				break;
 
 
-		case 4:
-			SetMouth (1);
-			break;
+			case 4:
+				SetMouth (1);
+				break;
 
 
-		case 5:
-			SetMouth (2);
-			break;
+			case 5:
+				SetMouth (2);
+				break;
 
 
-		case 6:
-			SetMouth (3);
-			break;
+			case 6:
+				SetMouth (3);
+				break;
 
 
-		case 7:
-			SetMouth (4);
-			break;
+			case 7:
+				SetMouth (4);
+				break;
 
+			case 9:
+				DoMove ();
+				break;
+
+			case 10:
+				DoMove ();
+				break;
+
+		
+			}
 		}
-
 		StartCoroutine (RandomAnimation ());
 	}
 
+	void DoMove ()
+	{
+		heartPlaceholder.gameObject.SetActive (true);
 
+		Debug.LogWarning ("Doing Move!");
+
+		DoingMove = true;
+		chosenMove = Random.Range (0, 4);
+		switch (chosenMove) {
+		case 0:
+
+			SetMouth (3);
+			LeftArmUpper.GetComponent<Animation> ().Play ();
+			LeftArmLower.GetComponent<Animation> ().Play ();
+			RightLegUpper.GetComponent<Animation> ().Play ();
+
+			break;
+		case 1:
+
+			SetMouth (4);
+			LeftArmUpper.GetComponent<Animation> ().Play ();
+			LeftArmLower.GetComponent<Animation> ().Play ();
+			LeftLegUpper.GetComponent<Animation> ().Play ();
+
+			break;
+		case 2:
+
+			SetMouth (2);
+			LeftArmUpper.GetComponent<Animation> ().Play ();
+			LeftArmLower.GetComponent<Animation> ().Play ();
+			RightLegUpper.GetComponent<Animation> ().Play ();
+
+			break;
+		case 3:
+			SetMouth (2);
+			RightArmUpper.GetComponent<Animation> ().Play ();
+			RightArmLower.GetComponent<Animation> ().Play ();
+			break;
+	
+		}
+
+		StartCoroutine (ResetMove ());
+
+	}
+
+	IEnumerator ResetMove ()
+	{
+
+		yield return new WaitForSeconds (5);
+		DoingMove = false;
+		heartPlaceholder.gameObject.SetActive (false);
+	}
 
 	IEnumerator ResetMouth ()
 	{
@@ -147,9 +214,7 @@ public class PCcharacter : MonoBehaviour
 		if (isPC) {
 			//	transform.localScale = new Vector3 (1, Mathf.Sin (Time.time) + .9f, 1);
 
-
 			transform.Translate (Input.GetAxis ("Horizontal") * Time.deltaTime, 0, 0);
-
 
 			if (Input.GetKeyDown (KeyCode.Q) || InputManager.Instance.GetXButtonDown ()) {
 				SetMouth (1);
@@ -191,6 +256,12 @@ public class PCcharacter : MonoBehaviour
 				LeftLegUpper.GetComponent<Animation> ().Play ();
 				//	LeftLegLower.GetComponent<Animation> ().Play ();
 				//	LeftFoot.GetComponent<Animation> ().Play ();
+			}
+		} else {
+			if (DoingMove) {
+				//check for player move
+
+
 			}
 		}
 	}

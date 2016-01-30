@@ -1,13 +1,35 @@
 fileFormatVersion: 2
 guid: d21a4daed744c4978b148f28c4c87d07
-timeCreated: 1454125077
+timeCreated: 1454126642
 licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: love_fx_0
+    21300002: love_fx_1
+    21300004: love_fx_2
+    21300006: love_fx_3
+    21300008: love_fx_4
+    21300010: love_fx_5
+    21300012: love_fx_6
+    21300014: love_fx_7
+    21300016: love_fx_8
+    21300018: love_fx_9
+    21300020: love_fx_10
+    21300022: love_fx_11
+    21300024: love_fx_12
+    21300026: love_fx_13
+    21300028: love_fx_14
+    21300030: love_fx_15
+    21300032: love_fx_16
+    21300034: love_fx_17
+    21300036: love_fx_18
+    21300038: love_fx_19
+    21300040: love_fx_20
+    21300042: love_fx_21
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -30,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +60,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +71,227 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: love_fx_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1520
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_1
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1520
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_2
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1520
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_3
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 1520
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_4
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 1520
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1140
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_6
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1140
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_7
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1140
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_8
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 1140
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_9
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 1140
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 760
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_11
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 760
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_12
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 760
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_13
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 760
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_14
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 760
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 380
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_16
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 380
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_17
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 380
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_18
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 380
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_19
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 380
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: love_fx_21
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 0
+        width: 326
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
