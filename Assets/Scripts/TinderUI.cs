@@ -9,8 +9,11 @@ public class TinderUI : MonoBehaviour
 {
     public List<LevelName> levels = new List<LevelName>();
     public List<GameObject> backgrounds = new List<GameObject>();
+    public List<GameObject> matches = new List<GameObject>();
     public Button likeButton;
     public Button dislikeButton;
+
+    public GameObject bgMatch;
 
     private Vector3 pos;
     private Quaternion rot;
@@ -74,23 +77,48 @@ public class TinderUI : MonoBehaviour
 
     private void LikeCompleted()
     {
-        print("load level: " + levels[_indexToSwap].levelName);
-        LevelManager.Instance.ChooseLevel(_indexToSwap, levels.Count);
+		//todo check if actually can play
+		if (LevelManager.Instance.MayChooseLevel(_indexToSwap, levels.Count))
+		{
+            // you may choose aka match
 
-		levels[_indexToSwap].transform.SetAsFirstSibling();
+			// TODO fix ugly ui snap when appear
+			// todo add sound
+			Vector3 scale = matches[_indexToSwap].transform.localScale;
+			matches[_indexToSwap].transform.DOScale(Vector3.zero, 0f);
 
-        levels[_indexToSwap].transform.position = pos;
-        levels[_indexToSwap].transform.rotation = rot;
+            matches[_indexToSwap].SetActive(true);
+            bgMatch.SetActive(true);
+
+			matches[_indexToSwap].transform.DOScale(scale, 0.3f).SetEase(Ease.InQuint);
+			matches[_indexToSwap].transform.DOPunchScale(Vector3.one*0.1f, 0.2f, 10, 0.5f).SetDelay(0.3f);
+
+            matches[_indexToSwap].transform.DOMove(matches[_indexToSwap].transform.position, 0f).SetDelay(3f).OnComplete(MatchCompleted);
 
 
-        _indexToSwap--;
-        if (_indexToSwap == -1)
-        {
-            _indexToSwap = levels.Count - 1;
         }
+		else
+		{
+			levels[_indexToSwap].transform.SetAsFirstSibling();
+
+			levels[_indexToSwap].transform.position = pos;
+			levels[_indexToSwap].transform.rotation = rot;
+
+			_indexToSwap--;
+			if (_indexToSwap == -1)
+			{
+				_indexToSwap = levels.Count - 1;
+			}
+		}
 
         // TODO what if level to load does not exist?
     }
+
+	private void MatchCompleted()
+	{
+		print("load level: " + levels[_indexToSwap].levelName);
+        LevelManager.Instance.ChooseLevel(_indexToSwap, levels.Count);
+	}
 
     private void Disliked()
     {
