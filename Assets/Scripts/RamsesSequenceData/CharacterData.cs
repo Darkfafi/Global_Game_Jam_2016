@@ -12,32 +12,15 @@ public class CharacterData : MonoBehaviour {
 	private Transform _movingPartC;
 	[SerializeField]
 	private Transform _movingPartD;
+	[SerializeField]
+	private Transform[] _mouths;
 
-	private List<Transform> _allCharacterParts = new List<Transform>(); // All parts of the body in general
-
-	void Awake(){
-		/*
-		for (int i = 0; i < transform.childCount; i++) {
-			_allCharacterParts.Add(transform.GetChild(i));
-			if(transform.tag != "Untagged"){
-				_allControlledParts.Add(transform.tag,transform); // If a tag is added to body part then add it to allControlledParts, for only controlled parts have a tag in the body
-			}
-		}*/
-		//_allControlledParts.Add(Tags.MOVE_PART_A,)
-	}
-
-	private void CheckUltChilderenForParts(){
-		Transform master = gameObject.transform;
-		Transform currentChild = gameObject.transform;
-		while (currentChild != null) {
-			while(master != null){
-
-			}
-		}
-	}
-
-	public List<Transform> GetAllCharacterParts(){
-		List<Transform> copiedList = _allCharacterParts;
+	public List<Transform> GetAllContolledParts(){
+		List<Transform> copiedList = new List<Transform>();
+		copiedList.Add (_movingPartA);
+		copiedList.Add (_movingPartB);
+		copiedList.Add (_movingPartC);
+		copiedList.Add (_movingPartD);
 		return copiedList;
 	}
 
@@ -59,5 +42,8 @@ public class CharacterData : MonoBehaviour {
 		}
 
 		return tr;
+	}
+	public Transform[] GetAllMouths(){
+		return _mouths;
 	}
 }

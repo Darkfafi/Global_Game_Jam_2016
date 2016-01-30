@@ -10,17 +10,17 @@ public class PlayerInput : MonoBehaviour {
 	}
 
 	void Update(){
-		if(InputManager.Instance.GetAButton()){
+		if(Input.GetKey (KeyCode.JoystickButton0)){
 			_character.CallPart(Tags.MOVE_PART_A);
 		}
-		if(InputManager.Instance.GetAButton()){
-			
+		if(Input.GetKey (KeyCode.JoystickButton1)){
+			_character.CallPart(Tags.MOVE_PART_B);
 		}
-		if(InputManager.Instance.GetAButton()){
-			
+		if(Input.GetKey (KeyCode.JoystickButton2)){
+			_character.CallPart(Tags.MOVE_PART_C);
 		}
-		if(InputManager.Instance.GetAButton()){
-			
+		if(Input.GetKey (KeyCode.JoystickButton3)){
+			_character.CallPart(Tags.MOVE_PART_D);
 		}
 	}
 }
