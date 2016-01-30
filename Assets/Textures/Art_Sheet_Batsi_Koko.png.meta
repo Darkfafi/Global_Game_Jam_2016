@@ -1,0 +1,276 @@
+fileFormatVersion: 2
+guid: 3811dddb28e2b4a43aba43b3b2f21f6a
+timeCreated: 1454119290
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Art_Sheet_Batsi_Koko_0
+    21300002: Art_Sheet_Batsi_Koko_1
+    21300004: Art_Sheet_Batsi_Koko_2
+    21300006: Art_Sheet_Batsi_Koko_3
+    21300008: Art_Sheet_Batsi_Koko_4
+    21300010: Art_Sheet_Batsi_Koko_5
+    21300012: Art_Sheet_Batsi_Koko_6
+    21300014: Art_Sheet_Batsi_Koko_7
+    21300016: Art_Sheet_Batsi_Koko_8
+    21300018: Art_Sheet_Batsi_Koko_9
+    21300020: Art_Sheet_Batsi_Koko_10
+    21300022: Art_Sheet_Batsi_Koko_11
+    21300024: Art_Sheet_Batsi_Koko_12
+    21300026: Art_Sheet_Batsi_Koko_13
+    21300028: Art_Sheet_Batsi_Koko_14
+    21300030: Art_Sheet_Batsi_Koko_15
+    21300032: Art_Sheet_Batsi_Koko_16
+    21300034: Art_Sheet_Batsi_Koko_17
+    21300036: Art_Sheet_Batsi_Koko_18
+    21300038: Art_Sheet_Batsi_Koko_19
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Art_Sheet_Batsi_Koko_0
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 733
+        width: 202
+        height: 198
+      alignment: 9
+      pivot: {x: .24799256, y: .292343616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_1
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 751
+        width: 41
+        height: 156
+      alignment: 9
+      pivot: {x: .547753334, y: .0732770115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_2
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 878
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_3
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 873
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_4
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 889
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_5
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 887
+        width: 52
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_6
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 789
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_7
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 781
+        width: 74
+        height: 68
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_8
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 832
+        width: 72
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_9
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 789
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_10
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 527
+        width: 155
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_11
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 638
+        width: 155
+        height: 113
+      alignment: 9
+      pivot: {x: .866318047, y: .612622797}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_12
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 476
+        width: 157
+        height: 137
+      alignment: 9
+      pivot: {x: .119642898, y: .507146001}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_13
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 339
+        width: 106
+        height: 137
+      alignment: 9
+      pivot: {x: .906357646, y: .928738356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_14
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 311
+        width: 29
+        height: 165
+      alignment: 9
+      pivot: {x: .466243356, y: .962777615}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_15
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 311
+        width: 120
+        height: 110
+      alignment: 9
+      pivot: {x: .100260928, y: .882681549}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_16
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 130
+        width: 50
+        height: 162
+      alignment: 9
+      pivot: {x: .245472416, y: .94717598}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_17
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 119
+        width: 29
+        height: 165
+      alignment: 9
+      pivot: {x: .466243356, y: .944978654}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_18
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 76
+        width: 43
+        height: 19
+      alignment: 9
+      pivot: {x: .77319622, y: .65457195}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Art_Sheet_Batsi_Koko_19
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 67
+        width: 42
+        height: 19
+      alignment: 9
+      pivot: {x: .127065018, y: .706096828}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

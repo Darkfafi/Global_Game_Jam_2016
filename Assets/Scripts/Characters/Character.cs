@@ -2,19 +2,23 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public abstract class Character : MonoBehaviour , ICharacter {
+public class Character : MonoBehaviour{
 
 	private CharacterData _characterData;
 
 	[SerializeField]private List<AudioClip> _allCharacterAudios = new List<AudioClip> ();
 
 	private void Awake(){
-		_characterData = gameObject.AddComponent<CharacterData> ();
+		_characterData = gameObject.GetComponent<CharacterData> ();
 	}
 
 	public CharacterData characterData{
 		get{return _characterData;}
 	}
 
-	public abstract void CallPart(string namePart,int range);
+	public void CallPart(string namePart){
+		Animation currentPartAnimator;
+		currentPartAnimator = characterData.GetContolledPart (namePart).GetComponent<Animation> ();
+		currentPartAnimator.Play (); //Cal the animation "PartMovement" in the animator
+	}
 }
