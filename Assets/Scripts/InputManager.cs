@@ -65,6 +65,31 @@ public class InputManager : MonoBehaviour
 		#endif
 	}
 
+	/*
+	public float GetLeftBumberButton ()
+	{
+		#if UNITY_WINDWOWS || UNITY_EDITOR
+		return Input.GetKey (KeyCode.Joystick1Button4);
+		#endif
+		
+		#if UNITY_EDITOR_OSX ||  UNITY_STANDALONE_OSX
+		return Input.GetKey (KeyCode.Joystick1Button13);
+		#endif
+	}
+
+
+	public float GetRightBumberButton ()
+	{
+		#if UNITY_WINDWOWS || UNITY_EDITOR
+		return Input.GetAxis(
+		#endif
+		
+		#if UNITY_EDITOR_OSX ||  UNITY_STANDALONE_OSX
+		return Input.GetKey (KeyCode.Joystick1Button14);
+		#endif
+	}
+*/
+
 
 	void Update ()
 	{
