@@ -64,7 +64,7 @@ public class SeduceableTarget : MonoBehaviour
 			}
 		}
 		_seducePatternIndex = index;
-		_seduceList.SetList (PatternLibrary.GetPatternByIndex (index, Mathf.RoundToInt(currentDifficulty)));
+		_seduceList.SetList (PatternLibrary.GetPatternByIndex (index, Mathf.RoundToInt (currentDifficulty)));
 		if (playRev) {
 			PlayReversedAnimation ();
 		}
@@ -88,7 +88,7 @@ public class SeduceableTarget : MonoBehaviour
 			if (_seduceList.CheckIfMatch (_targetCharacter)) {
 				_listeningToSeduction = false;
 				_timerTransform.gameObject.SetActive (false);
-				WinCondition();
+				WinCondition ();
 			} else {
 				_timesIncorrectGuess++;
 				if (_timesIncorrectGuess == _timesTolorateIncorrect) {
@@ -112,13 +112,14 @@ public class SeduceableTarget : MonoBehaviour
 		_timerTransform.gameObject.SetActive (false);
 		LoseCondition ();
 	}
-	private void WinCondition(){
+	private void WinCondition ()
+	{
 		_timesSeducesInRow ++;
 		_timesTimerDownInRow = 0;
 		if (currentDifficulty < 2) {
 			currentDifficulty += 0.5f;
 		}
-		_timerTransform.GetComponent<Timer> ().Reset();
+		_timerTransform.GetComponent<Timer> ().Reset ();
 		_listeningToSeduction = false;
 		PlayReversedAnimation ();
 		ChooseSeduction ();
@@ -147,12 +148,14 @@ public class SeduceableTarget : MonoBehaviour
 	}
 	private void ShowLove ()
 	{
+		//GetComponent<Animation> ().Play ("hopjump");
 		_character.MoveToDirection (-1);
 		_targetCharacter.MoveToDirection (1);
 		_position ++;
 		Instantiate (Resources.Load<GameObject> ("Prefabs/Heart"), new Vector3 (0, 0, -1), Quaternion.identity);
 	}
-	private void ShowHate(){
+	private void ShowHate ()
+	{
 		_character.MoveToDirection (1);
 		_targetCharacter.MoveToDirection (-1);
 		_position --;
