@@ -31,6 +31,18 @@ public class TinderUI : MonoBehaviour
 		//todo make work
 	}
 
+	void Update ()
+	{
+		if (InputManager.Instance.GetAButton ()) {
+			Liked ();
+		}
+
+		if (InputManager.Instance.GetBButton ()) {
+			Disliked ();
+		}
+	}
+
+
 	private void Liked ()
 	{
 		DOTween.CompleteAll (true);

@@ -102,46 +102,30 @@ public class PCcharacter : MonoBehaviour
 				LeftArmUpper.GetComponent<Animation> ().Play ();
 				LeftArmLower.GetComponent<Animation> ().Play ();
 				break;
-
-
 			case 2:
 				RightLegUpper.GetComponent<Animation> ().Play ();
 				break;
-
-
 			case 3:
 				LeftLegUpper.GetComponent<Animation> ().Play ();
 				break;
-
-
 			case 4:
 				SetMouth (1);
 				break;
-
-
 			case 5:
 				SetMouth (2);
 				break;
-
-
 			case 6:
 				SetMouth (3);
 				break;
-
-
 			case 7:
 				SetMouth (4);
 				break;
-
 			case 9:
 				DoMove ();
 				break;
-
 			case 10:
 				DoMove ();
 				break;
-
-		
 			}
 		}
 		StartCoroutine (RandomAnimation ());
@@ -157,7 +141,6 @@ public class PCcharacter : MonoBehaviour
 		chosenMove = Random.Range (0, 4);
 		switch (chosenMove) {
 		case 0:
-
 			SetMouth (3);
 			LeftArmUpper.GetComponent<Animation> ().Play ();
 			LeftArmLower.GetComponent<Animation> ().Play ();
@@ -185,16 +168,13 @@ public class PCcharacter : MonoBehaviour
 			RightArmUpper.GetComponent<Animation> ().Play ();
 			RightArmLower.GetComponent<Animation> ().Play ();
 			break;
-	
 		}
 
 		StartCoroutine (ResetMove ());
-
 	}
 
 	IEnumerator ResetMove ()
 	{
-
 		yield return new WaitForSeconds (5);
 		DoingMove = false;
 		heartPlaceholder.gameObject.SetActive (false);
@@ -261,6 +241,43 @@ public class PCcharacter : MonoBehaviour
 			if (DoingMove) {
 				//check for player move
 
+				switch (chosenMove) {
+				case 0:
+
+					/*
+					SetMouth (3);
+					LeftArmUpper.GetComponent<Animation> ().Play ();
+					LeftArmLower.GetComponent<Animation> ().Play ();
+					RightLegUpper.GetComponent<Animation> ().Play ();
+					*/
+
+					break;
+				case 1:
+
+					/*
+					SetMouth (4);
+					LeftArmUpper.GetComponent<Animation> ().Play ();
+					LeftArmLower.GetComponent<Animation> ().Play ();
+					LeftLegUpper.GetComponent<Animation> ().Play ();
+					*/
+
+					break;
+				case 2:
+					/*
+					SetMouth (2);
+					LeftArmUpper.GetComponent<Animation> ().Play ();
+					LeftArmLower.GetComponent<Animation> ().Play ();
+					RightLegUpper.GetComponent<Animation> ().Play ();
+					*/
+					break;
+				case 3:
+					/*
+					SetMouth (2);
+					RightArmUpper.GetComponent<Animation> ().Play ();
+					RightArmLower.GetComponent<Animation> ().Play ();
+					*/
+					break;
+				}
 
 			}
 		}

@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
+//using System.Collections.Generic;
 
 public class InputManager : MonoBehaviour
 {
 	public static InputManager Instance;
 
-	public List<Transform> Players = new List<Transform> ();
+//	public List<Transform> Players = new List<Transform> ();
 
 	void Awake ()
 	{
