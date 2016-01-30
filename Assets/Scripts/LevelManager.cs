@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class LevelManager : MonoBehaviour {
 
@@ -7,6 +8,8 @@ public class LevelManager : MonoBehaviour {
 
     public int UnlockedLevel { get; private set; }
     private int _currentPlayedLevel = 0;
+
+    public Dictionary<int, bool> matedLevels = new Dictionary<int, bool>();
 
     // Initialisation
     void Awake()
@@ -57,5 +60,10 @@ public class LevelManager : MonoBehaviour {
         }
         UnlockedLevel++;
         _currentPlayedLevel = 0;
+    }
+
+	public void SetMated(int level, bool mated)
+	{
+        matedLevels.Add(level, mated);
     }
 }
