@@ -26,13 +26,14 @@ public class GameManager : MonoBehaviour
 	{
 		LovePoints += points;
 		if (LovePoints > LovePointsToNextLevel) {
-			fadeToBlack.gameObject.SetActive (true);
 			StartCoroutine (DelayLoadLevel ());
 		}
 	}
 
 	IEnumerator DelayLoadLevel ()
 	{
+		yield return new WaitForSeconds (2);
+		fadeToBlack.gameObject.SetActive (true);
 		yield return new WaitForSeconds (5);
 		Application.LoadLevel (Application.loadedLevel - 1);//to replaced later
 	}
