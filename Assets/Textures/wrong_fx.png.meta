@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 2a623f339b1ac422db0ce7054c6884f8
-timeCreated: 1454188205
+timeCreated: 1454239662
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -19,6 +19,24 @@ TextureImporter:
     21300024: wrong_fx_12
     21300026: wrong_fx_13
     21300028: wrong_fx_14
+    21300030: wrong_fx_15
+    21300032: wrong_fx_16
+    21300034: wrong_fx_17
+    21300036: wrong_fx_18
+    21300038: wrong_fx_19
+    21300040: wrong_fx_20
+    21300042: wrong_fx_21
+    21300044: wrong_fx_22
+    21300046: wrong_fx_23
+    21300048: wrong_fx_24
+    21300050: wrong_fx_25
+    21300052: wrong_fx_26
+    21300054: wrong_fx_27
+    21300056: wrong_fx_28
+    21300058: wrong_fx_29
+    21300060: wrong_fx_30
+    21300062: wrong_fx_31
+    21300064: wrong_fx_32
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -69,149 +87,329 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 948
-        width: 330
-        height: 316
+        y: 2000
+        width: 550
+        height: 400
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: wrong_fx_1
       rect:
         serializedVersion: 2
-        x: 330
-        y: 948
-        width: 330
-        height: 316
+        x: 550
+        y: 2000
+        width: 550
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: wrong_fx_2
       rect:
         serializedVersion: 2
-        x: 660
-        y: 948
-        width: 330
-        height: 316
+        x: 1100
+        y: 2000
+        width: 550
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: wrong_fx_3
       rect:
         serializedVersion: 2
-        x: 990
-        y: 948
-        width: 330
-        height: 316
+        x: 1650
+        y: 2000
+        width: 550
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: wrong_fx_4
       rect:
         serializedVersion: 2
-        x: 1320
-        y: 948
-        width: 330
-        height: 316
+        x: 2200
+        y: 2000
+        width: 550
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: wrong_fx_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 632
-        width: 330
-        height: 316
+        x: 2750
+        y: 2000
+        width: 550
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: wrong_fx_6
       rect:
         serializedVersion: 2
-        x: 330
-        y: 632
-        width: 330
-        height: 316
+        x: 0
+        y: 1600
+        width: 550
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: wrong_fx_7
       rect:
         serializedVersion: 2
-        x: 660
-        y: 632
-        width: 330
-        height: 316
+        x: 550
+        y: 1600
+        width: 550
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: wrong_fx_8
       rect:
         serializedVersion: 2
-        x: 990
-        y: 632
-        width: 330
-        height: 316
+        x: 1100
+        y: 1600
+        width: 550
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: wrong_fx_9
       rect:
         serializedVersion: 2
-        x: 1320
-        y: 632
-        width: 330
-        height: 316
+        x: 1650
+        y: 1600
+        width: 550
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: wrong_fx_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 316
-        width: 330
-        height: 316
+        x: 2200
+        y: 1600
+        width: 550
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: wrong_fx_11
       rect:
         serializedVersion: 2
-        x: 330
-        y: 316
-        width: 330
-        height: 316
+        x: 2750
+        y: 1600
+        width: 550
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: wrong_fx_12
       rect:
         serializedVersion: 2
-        x: 660
-        y: 316
-        width: 330
-        height: 316
+        x: 0
+        y: 1200
+        width: 550
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: wrong_fx_13
       rect:
         serializedVersion: 2
-        x: 990
-        y: 316
-        width: 330
-        height: 316
+        x: 550
+        y: 1200
+        width: 550
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: wrong_fx_14
       rect:
         serializedVersion: 2
-        x: 1320
-        y: 316
-        width: 330
-        height: 316
+        x: 1100
+        y: 1200
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wrong_fx_15
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 1200
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wrong_fx_16
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1200
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wrong_fx_17
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 1200
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wrong_fx_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wrong_fx_19
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 800
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wrong_fx_20
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 800
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wrong_fx_21
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 800
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wrong_fx_22
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 800
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wrong_fx_23
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 800
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wrong_fx_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wrong_fx_25
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 400
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wrong_fx_26
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 400
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wrong_fx_27
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 400
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wrong_fx_28
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 400
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wrong_fx_29
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 400
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wrong_fx_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wrong_fx_31
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 0
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wrong_fx_32
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 0
+        width: 550
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
