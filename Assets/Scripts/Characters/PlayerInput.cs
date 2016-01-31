@@ -31,22 +31,22 @@ public class PlayerInput : MonoBehaviour
 			_character.SetMouth (4);
 		}
 		
-		if (Input.GetKeyDown (KeyCode.RightArrow) || Input.GetKeyDown (KeyCode.JoystickButton4)) {
+		if (Input.GetKeyDown (KeyCode.O) || Input.GetKeyDown (KeyCode.JoystickButton4)) {
 			Debug.Log ("right arm animation");
 			_character.CallPart (Tags.MOVE_PART_A);
 		}
 		
-		if (Input.GetKeyDown (KeyCode.LeftArrow) || Input.GetKeyDown (KeyCode.JoystickButton5)) {
+		if (Input.GetKeyDown (KeyCode.P) || Input.GetKeyDown (KeyCode.JoystickButton5)) {
 			Debug.Log ("right arm animation");
 			_character.CallPart (Tags.MOVE_PART_B);
 		}
 		Debug.Log (Input.GetAxis ("RightTriggerWin"));
-		if (Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.JoystickButton6)) {
+		if (Input.GetKeyDown (KeyCode.K) || Input.GetKeyDown (KeyCode.JoystickButton6)) {
 			Debug.Log ("right arm animation");
 			_character.CallPart (Tags.MOVE_PART_C);
 		}
 		
-		if (Input.GetKeyDown (KeyCode.DownArrow) || Input.GetKeyDown (KeyCode.JoystickButton7)) {
+		if (Input.GetKeyDown (KeyCode.L) || Input.GetKeyDown (KeyCode.JoystickButton7)) {
 			Debug.Log ("right arm animation");
 			_character.CallPart (Tags.MOVE_PART_D);
 		}
@@ -68,22 +68,22 @@ public class PlayerInput : MonoBehaviour
 			_character.SetMouth (4);
 		}
 	
-		if (Input.GetKeyDown (KeyCode.RightArrow) || Input.GetKeyDown (KeyCode.JoystickButton13)) {
+		if (Input.GetKeyDown (KeyCode.O) || Input.GetKeyDown (KeyCode.JoystickButton13)) {
 			Debug.Log ("right arm animation");
 			_character.CallPart (Tags.MOVE_PART_A);
 		}
 	
-		if (Input.GetKeyDown (KeyCode.LeftArrow) || Input.GetKeyDown (KeyCode.JoystickButton14)) {
+		if (Input.GetKeyDown (KeyCode.P) || Input.GetKeyDown (KeyCode.JoystickButton14)) {
 			Debug.Log ("right arm animation");
 			_character.CallPart (Tags.MOVE_PART_B);
 		}
 		Debug.Log (Input.GetAxis ("RightTriggerWin"));
-		if (Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.JoystickButton10)) {
+		if (Input.GetKeyDown (KeyCode.K) || Input.GetKeyDown (KeyCode.JoystickButton10)) {
 			Debug.Log ("right arm animation");
 			_character.CallPart (Tags.MOVE_PART_C);
 		}
 	
-		if (Input.GetKeyDown (KeyCode.DownArrow) || Input.GetKeyDown (KeyCode.JoystickButton9)) {
+		if (Input.GetKeyDown (KeyCode.L) || Input.GetKeyDown (KeyCode.JoystickButton9)) {
 			Debug.Log ("right arm animation");
 			_character.CallPart (Tags.MOVE_PART_D);
 		}
