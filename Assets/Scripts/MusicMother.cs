@@ -20,6 +20,11 @@ public class MusicMother : MonoBehaviour {
         DontDestroyOnLoad(this.gameObject);
     }
 
+	public void Destruct()
+	{
+        Destroy(this.gameObject);
+    }
+
 	public void PlayTheme()
 	{
         GetComponent<AudioSource>().Stop();

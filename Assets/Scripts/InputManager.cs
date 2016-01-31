@@ -21,7 +21,7 @@ public class InputManager : MonoBehaviour
 	public bool GetAButton ()
 	{
 		Debug.Log ("A pressed");
-		#if UNITY_WINDWOWS 
+		#if UNITY_WINDWOWS
 		return Input.GetKey (KeyCode.Joystick1Button0);
 		#else
 		return Input.GetKey (KeyCode.Joystick1Button16);
@@ -31,7 +31,7 @@ public class InputManager : MonoBehaviour
 	public bool GetBButton ()
 	{
 		Debug.Log ("B pressed");
-		#if UNITY_WINDWOWS 
+		#if UNITY_WINDWOWS
 		return Input.GetKey (KeyCode.Joystick1Button1);
 		#else
 		return Input.GetKey (KeyCode.Joystick1Button17);
@@ -41,7 +41,7 @@ public class InputManager : MonoBehaviour
 	public bool GetXButton ()
 	{
 		Debug.Log ("X pressed");
-		#if UNITY_WINDWOWS 
+		#if UNITY_WINDWOWS
 		return Input.GetKey (KeyCode.Joystick1Button2);
 		#else
 		return Input.GetKey (KeyCode.Joystick1Button18);
@@ -51,7 +51,7 @@ public class InputManager : MonoBehaviour
 	public bool GetYButton ()
 	{
 		Debug.Log ("Y pressed");
-		#if UNITY_WINDWOWS 
+		#if UNITY_WINDWOWS
 		return Input.GetKey (KeyCode.Joystick1Button3);
 		#else
 		return Input.GetKey (KeyCode.Joystick1Button19);
@@ -61,7 +61,7 @@ public class InputManager : MonoBehaviour
 
 	public bool GetLeftBumberButton ()
 	{
-		#if UNITY_WINDWOWS 
+		#if UNITY_WINDWOWS
 		return Input.GetKey (KeyCode.Joystick1Button4);
 		#else
 		return Input.GetKey (KeyCode.Joystick1Button13);
@@ -71,7 +71,7 @@ public class InputManager : MonoBehaviour
 
 	public bool GetRightBumberButton ()
 	{
-		#if UNITY_WINDWOWS 
+		#if UNITY_WINDWOWS
 		return Input.GetKey (KeyCode.Joystick1Button3);
 		#else
 		return Input.GetKey (KeyCode.Joystick1Button14);
@@ -82,57 +82,57 @@ public class InputManager : MonoBehaviour
 	public bool GetAButtonDown ()
 	{
 		Debug.Log ("A pressed");
-		#if UNITY_WINDWOWS 
+		#if UNITY_WINDWOWS
 		return Input.GetKey (KeyCode.Joystick1Button0);
 		#else
 		return Input.GetKey (KeyCode.Joystick1Button16);
 		#endif
 	}
-	
+
 	public bool GetBButtonDown ()
 	{
 		Debug.Log ("B pressed");
-		#if UNITY_WINDWOWS 
+		#if UNITY_WINDWOWS
 		return Input.GetKeyDown (KeyCode.Joystick1Button1);
 		#else
 		return Input.GetKeyDown (KeyCode.Joystick1Button17);
 		#endif
 	}
-	
+
 	public bool GetXButtonDown ()
 	{
 		Debug.Log ("X pressed");
-		#if UNITY_WINDWOWS 
+		#if UNITY_WINDWOWS
 		return Input.GetKeyDown (KeyCode.Joystick1Button2);
 		#else
 		return Input.GetKeyDown (KeyCode.Joystick1Button18);
 		#endif
 	}
-	
+
 	public bool GetYButtonDown ()
 	{
 		Debug.Log ("Y pressed");
-		#if UNITY_WINDWOWS 
+		#if UNITY_WINDWOWS
 		return Input.GetKeyDown (KeyCode.Joystick1Button3);
 		#else
 		return Input.GetKeyDown (KeyCode.Joystick1Button19);
 		#endif
 	}
-	
-	
+
+
 	public bool GetLeftBumberButtonDown ()
 	{
-		#if UNITY_WINDWOWS 
+		#if UNITY_WINDWOWS
 		return Input.GetKeyDown (KeyCode.Joystick1Button4);
 		#else
 		return Input.GetKeyDown (KeyCode.Joystick1Button13);
 		#endif
 	}
-	
-	
+
+
 	public bool GetRightBumberButtonDown ()
 	{
-		#if UNITY_WINDWOWS 
+		#if UNITY_WINDWOWS
 		return Input.GetKeyDown (KeyCode.Joystick1Button3);
 		#else
 		return Input.GetKeyDown (KeyCode.Joystick1Button14);
@@ -143,17 +143,17 @@ public class InputManager : MonoBehaviour
 	/*
 	public bool GetLeftTriggerButton ()
 	{
-		#if UNITY_WINDWOWS 
+		#if UNITY_WINDWOWS
 		return Input.GetKey (KeyCode.Joystick1Button4);
 		#else
 		return Input.GetKey (KeyCode.Joystick1Button13);
 		#endif
 	}
-	
-	
+
+
 	public bool GetRightTriggerButton ()
 	{
-		#if UNITY_WINDWOWS 
+		#if UNITY_WINDWOWS
 		return Input.GetKey (KeyCode.Joystick1Button3);
 		#else
 		return Input.GetKey (KeyCode.Joystick1Button14);
@@ -168,5 +168,10 @@ public class InputManager : MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			Application.Quit ();
 		}
+		if (Input.GetKeyDown (KeyCode.Return)) {
+            LevelManager.Instance.Destruct();
+			MusicMother.Instance.Destruct();
+            Application.LoadLevel("Splash");
+        }
 	}
 }

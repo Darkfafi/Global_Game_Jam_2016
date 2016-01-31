@@ -30,6 +30,11 @@ public class LevelManager : MonoBehaviour {
 		// TODO playerprefs
     }
 
+	public void Destruct()
+	{
+        Destroy(this.gameObject);
+    }
+
 	public int GetCurrentLevel()
 	{
         return _currentPlayedLevel;
