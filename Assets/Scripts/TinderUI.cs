@@ -13,6 +13,9 @@ public class TinderUI : MonoBehaviour
     public Button likeButton;
     public Button dislikeButton;
 
+    public AudioClip clickSound1;
+    public AudioClip clickSound2;
+
     public GameObject bgMatch;
 
     private Vector3 pos;
@@ -24,6 +27,7 @@ public class TinderUI : MonoBehaviour
     private Sequence dislikeSequence;
 
     bool AxisAllowed = true;
+
     // Use this for initialization
     void Start()
     {
@@ -107,6 +111,9 @@ public class TinderUI : MonoBehaviour
         levels[nextIndex].transform.DOScale(levels[nextIndex].transform.localScale *= 0.96f, 0);
         levels[nextIndex].transform.DOScale(Vector3.one, 0.3f);
 
+        GetComponent<AudioSource>().clip = clickSound1;
+        GetComponent<AudioSource>().Play();
+
         //backgrounds[_indexToSwap].transform.DOScale(transform.localScale * 1.1f, 0.8f).SetEase(Ease.OutCubic);
 
         levels[_indexToSwap].like.SetActive(true);
@@ -178,6 +185,9 @@ public class TinderUI : MonoBehaviour
         print("disliked");
 
         DOTween.CompleteAll(true);
+
+		GetComponent<AudioSource>().clip = clickSound2;
+        GetComponent<AudioSource>().Play();
 
         levels[_indexToSwap].transform.DOMoveX(-16, 0.5f).SetEase(Ease.InSine).OnComplete(DislikeCompleted);
         levels[_indexToSwap].transform.DOMoveY(10, 0.4f).SetEase(Ease.InCirc);
