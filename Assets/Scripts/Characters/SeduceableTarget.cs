@@ -37,7 +37,7 @@ public class SeduceableTarget : MonoBehaviour
 	private AudioClip
 		_endCharacterSounds;
 	[SerializeField]
-	private MoviePlayerSystem 
+	private MoviePlayerSystem
 		_climaxMoviePlayer;
 
 	private Transform movie;
@@ -185,7 +185,7 @@ public class SeduceableTarget : MonoBehaviour
 	{
 		Debug.Log ("Win"); //TODO Show WIN effect and go back to menu.
 		LevelManager.Instance.SetMated (LevelManager.Instance.totalLevels - 1, true);
-		_climaxMoviePlayer.PlayMovie ();
+		_climaxMoviePlayer.PlayMovie (7);
 		//Application.LoadLevel ("StartMenu");
         MusicMother.Instance.PlayTheme();
 	}

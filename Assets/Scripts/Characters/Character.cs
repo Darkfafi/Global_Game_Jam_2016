@@ -135,7 +135,7 @@ public class Character : MonoBehaviour
 				_directionMoving = 0;
 
 				if (tag == "Batsikoko") {
-					GetComponent<Animation> ().Play ("batsikokoidle2");
+					GetComponent<Animation> ().Play ("BatsikokoIdle2");
 				}
 				if (tag == "Bakatuka") {
 					GetComponent<Animation> ().Play ("idle2");
