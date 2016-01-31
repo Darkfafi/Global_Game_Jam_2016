@@ -12,8 +12,7 @@ public class Character : MonoBehaviour
 	private Vector2 _differents;
 	private int _directionMoving = 0;
 
-	[SerializeField]
-	private Transform _heartAnimation;
+
 
 	private CharacterData _characterData;
 	[SerializeField]
@@ -62,7 +61,25 @@ public class Character : MonoBehaviour
 			}
 		}
 		Debug.Log ("mouth: " + m);
-		
+
+		switch (m) {
+		case 1:
+			GetComponent<SoundHint> ().GreenA ();
+			break;
+		case 2:
+
+			GetComponent<SoundHint> ().RedB ();
+			break;
+
+		case 3:
+			GetComponent<SoundHint> ().BlueX ();
+			break;
+
+		case 4:
+			GetComponent<SoundHint> ().YellowY ();
+			break;
+
+		}
 		//StopCoroutine (ResetMouth ());
 		if (m != 0) {
 			StartCoroutine (ResetMouth ());
@@ -85,13 +102,11 @@ public class Character : MonoBehaviour
 		//gameObject.GetComponent<Animation> ().clip = _hopAnimation;
 		//gameObject.GetComponent<Animation> ().Play();
 		GetComponent<Animation> ().Play ("hopjump");
-
-		Invoke ("ShowHearts", 1);
 	}
 
 	void ShowHearts ()
 	{
-		_heartAnimation.gameObject.SetActive (true);
+		//	_heartAnimation.gameObject.SetActive (true);
 	}
 
 	void Update ()
@@ -104,7 +119,7 @@ public class Character : MonoBehaviour
 				_directionMoving = 0;
 				GetComponent<Animation> ().Play ("idle2");
 
-				_heartAnimation.gameObject.SetActive (false);
+				//	_heartAnimation.gameObject.SetActive (false);
 				//gameObject.GetComponent<Animation> ().clip = _idleAnimation;
 				//gameObject.GetComponent<Animation> ().Play();
 			}

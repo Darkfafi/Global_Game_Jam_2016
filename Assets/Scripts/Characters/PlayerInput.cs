@@ -1,14 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerInput : MonoBehaviour {
+public class PlayerInput : MonoBehaviour
+{
 
 	private Character _character;
-	void Awake(){
+	void Awake ()
+	{
 		_character = gameObject.GetComponent<Character> ();
 	}
 
-	void Update(){
+	void Update ()
+	{
+
+		// Do this also for mac... TODO
+
 		if (Input.GetKeyDown (KeyCode.Q) || Input.GetKeyDown (KeyCode.JoystickButton0)) {
 			_character.SetMouth (1);
 		}
@@ -27,22 +33,22 @@ public class PlayerInput : MonoBehaviour {
 		
 		if (Input.GetKeyDown (KeyCode.RightArrow) || Input.GetKeyDown (KeyCode.JoystickButton4)) {
 			Debug.Log ("right arm animation");
-			_character.CallPart(Tags.MOVE_PART_A);
+			_character.CallPart (Tags.MOVE_PART_A);
 		}
 		
 		if (Input.GetKeyDown (KeyCode.LeftArrow) || Input.GetKeyDown (KeyCode.JoystickButton5)) {
 			Debug.Log ("right arm animation");
-			_character.CallPart(Tags.MOVE_PART_B);
+			_character.CallPart (Tags.MOVE_PART_B);
 		}
 		Debug.Log (Input.GetAxis ("RightTriggerWin"));
-		if (Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.JoystickButton6)) {
+		if (Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.JoystickButton6)) {
 			Debug.Log ("right arm animation");
-			_character.CallPart(Tags.MOVE_PART_C);
+			_character.CallPart (Tags.MOVE_PART_C);
 		}
 		
-		if (Input.GetKeyDown (KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.JoystickButton7)) {
+		if (Input.GetKeyDown (KeyCode.DownArrow) || Input.GetKeyDown (KeyCode.JoystickButton7)) {
 			Debug.Log ("right arm animation");
-			_character.CallPart(Tags.MOVE_PART_D);
+			_character.CallPart (Tags.MOVE_PART_D);
 		}
 	}
 

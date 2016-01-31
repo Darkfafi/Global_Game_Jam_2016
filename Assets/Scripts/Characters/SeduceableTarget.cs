@@ -13,6 +13,23 @@ public class SeduceableTarget : MonoBehaviour
 	private Transform
 		_timerTransform;
 
+	[SerializeField]
+	private Transform
+		_heartAnimation;
+
+	[SerializeField]
+	private Transform
+		_loveFX;
+
+	[SerializeField]
+	private Transform
+		_fadeToBlack;
+
+	[SerializeField]
+	private AudioClip
+		_endCharacterSounds;
+
+
 	public int baseDificulty = 0;
 	public float currentDifficulty = 0;
 
@@ -125,13 +142,29 @@ public class SeduceableTarget : MonoBehaviour
 		ChooseSeduction ();
 		ShowLove ();
 		if (_position == 4) {
-			Debug.Log ("Win"); //TODO Show WIN effect and go back to menu.
-			LevelManager.Instance.SetMated(LevelManager.Instance.totalLevels - 1, true);
-            Application.LoadLevel("StartMenu");
-        } else {
+			_loveFX.gameObject.SetActive (true);
+			Invoke ("FadeToBlack", 4);
+			Invoke ("WinClimax", 6);
+		} else {
 			StartCoroutine (WaitForListen (2));
 		}
 	}
+
+	private void FadeToBlack ()
+	{
+		GetComponent<AudioSource> ().clip = _endCharacterSounds;
+		GetComponent<AudioSource> ().Play ();
+
+		_fadeToBlack.gameObject.SetActive (true);
+	}
+
+	private void WinClimax ()
+	{
+		Debug.Log ("Win"); //TODO Show WIN effect and go back to menu.
+		LevelManager.Instance.SetMated (LevelManager.Instance.totalLevels - 1, true);
+		Application.LoadLevel ("StartMenu");
+	}
+
 	private void LoseCondition ()
 	{
 		_timesTimerDownInRow++;
@@ -144,19 +177,19 @@ public class SeduceableTarget : MonoBehaviour
 		ShowHate ();
 		if (_position == -4) {
 			Debug.Log ("End"); //TODO Show LOSE effect and go back to menu.
-			LevelManager.Instance.SetMated(LevelManager.Instance.totalLevels - 1, false);
-            Application.LoadLevel("StartMenu");
-        } else {
+			LevelManager.Instance.SetMated (LevelManager.Instance.totalLevels - 1, false);
+			Application.LoadLevel ("StartMenu");
+		} else {
 			StartCoroutine (WaitForListen (2));
 		}
 	}
 	private void ShowLove ()
 	{
-		//GetComponent<Animation> ().Play ("hopjump");
 		_character.MoveToDirection (-1);
 		_targetCharacter.MoveToDirection (1);
 		_position ++;
 		Instantiate (Resources.Load<GameObject> ("Prefabs/Heart"), new Vector3 (0, 0, -1), Quaternion.identity);
+		Invoke ("HeartAnimation", 1);
 	}
 	private void ShowHate ()
 	{
@@ -165,4 +198,17 @@ public class SeduceableTarget : MonoBehaviour
 		_position --;
 		Instantiate (Resources.Load<GameObject> ("Prefabs/Wrong"), new Vector3 (0, 0, -1), Quaternion.identity);
 	}
+
+	private void HeartAnimation ()
+	{
+		_heartAnimation.gameObject.SetActive (true);
+		Invoke ("StopHeartAnimation", 2);
+	}
+
+	private void StopHeartAnimation ()
+	{
+		_heartAnimation.gameObject.SetActive (false);
+	}
+
+
 }
