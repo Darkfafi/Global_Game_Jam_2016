@@ -15,7 +15,15 @@ public class SeduceableTarget : MonoBehaviour
 
 	[SerializeField]
 	private Transform
-		_heartAnimation;
+		_heartAnimation0;
+	[SerializeField]
+	private Transform
+		_heartAnimation1;
+	[SerializeField]
+	private Transform
+		_heartAnimation2;
+
+
 
 	[SerializeField]
 	private Transform
@@ -209,10 +217,12 @@ public class SeduceableTarget : MonoBehaviour
 		_position ++;
 		Instantiate (Resources.Load<GameObject> ("Prefabs/Heart"), new Vector3 (0, 0, -1), Quaternion.identity);
 		//Invoke ("HeartAnimation", 1);
-		if (_position > 0) {
-			if(!_heartAnimation.gameObject.activeSelf){
-				_heartAnimation.gameObject.SetActive(true);
-			}
+		if (_position == 1) {
+			_heartAnimation0.gameObject.SetActive (true);
+		} else if (_position == 2) {
+			_heartAnimation1.gameObject.SetActive (true);
+		} else if (_position == 3) {
+			_heartAnimation2.gameObject.SetActive (true);
 		}
 	}
 	private void ShowHate ()
@@ -221,23 +231,12 @@ public class SeduceableTarget : MonoBehaviour
 		_targetCharacter.MoveToDirection (-1);
 		_position --;
 		Instantiate (Resources.Load<GameObject> ("Prefabs/Wrong"), new Vector3 (0, 0, -1), Quaternion.identity);
-		if (_position <= 0) {
-			if(_heartAnimation.gameObject.activeSelf){
-				_heartAnimation.gameObject.SetActive(false);
-			}
+		if (_position == 0) {
+			_heartAnimation0.gameObject.SetActive (false);
+		} else if (_position == 1) {
+			_heartAnimation1.gameObject.SetActive (false);
+		} else if (_position == 2) {
+			_heartAnimation2.gameObject.SetActive (false);
 		}
 	}
-
-	private void HeartAnimation ()
-	{
-		_heartAnimation.gameObject.SetActive (true);
-		//Invoke ("StopHeartAnimation", 2);
-	}
-
-	private void StopHeartAnimation ()
-	{
-		_heartAnimation.gameObject.SetActive (false);
-	}
-
-
 }
