@@ -3,15 +3,30 @@ using System.Collections;
 
 public class MoviePlayerSystem : MonoBehaviour {
 	
-	public string movieFolder;
+	public string movieFolder = "";
 	private Sprite[] _movie; 
 
 	private SpriteRenderer _renderer;
 	private int _currentSpriteIndex = 0;
+
+	[SerializeField]private GameObject _fadeToBlack;
+
 	// Use this for initialization
-	void Start () {
+	void Awake(){
 		_renderer = gameObject.AddComponent<SpriteRenderer> ();
 		_movie = Resources.LoadAll<Sprite> ("Climax/" + movieFolder);
+	}
+
+	public void PlayMovie (float afterSecondsToMenu = 2) {
+		StopCoroutine (VideoSystem ());
+		if (movieFolder == "") {
+			movieFolder = "Bakatuka"; //If there is no video then just load the first by default
+		}
+
+		_fadeToBlack.SetActive (false);
+		Invoke ("DarkenScreen", afterSecondsToMenu);
+		Invoke ("GoBackToMenu", afterSecondsToMenu + 3);
+
 		StartCoroutine (VideoSystem ());
 	}
 	
@@ -25,5 +40,13 @@ public class MoviePlayerSystem : MonoBehaviour {
 		}
 		yield return new WaitForSeconds (.03f);
 		StartCoroutine (VideoSystem ());
+	}
+	private void DarkenScreen(){
+		_fadeToBlack.SetActive (true);
+		_fadeToBlack.GetComponent<Animation> ().Rewind();
+		_fadeToBlack.GetComponent<Animation> ().Play ();
+	}
+	public void GoBackToMenu(){
+		Application.LoadLevel (1);
 	}
 }

@@ -14,8 +14,9 @@ public class LoveFX : MonoBehaviour
 	IEnumerator WaitToStartLoveFX ()
 	{
 		yield return new WaitForSeconds (.5f);
-
-		otherLoveFX.gameObject.SetActive (true);
+		if (otherLoveFX != null) {
+			otherLoveFX.gameObject.SetActive (true);
+		}
 	}
 
 }
