@@ -70,13 +70,14 @@ public class LevelManager : MonoBehaviour {
         _currentPlayedLevel = 0;
     }
 
-	public void SetMated(int level, bool mated)
+	public void SetMated(int level, int totalLevels, bool mated)
 	{
-		if (matedLevels.ContainsKey(level))
+		int levelToCheck = totalLevels - level;
+		if (matedLevels.ContainsKey(levelToCheck))
 		{
-            matedLevels[level] = mated;
+            matedLevels[levelToCheck] = mated;
             return;
         }
-        matedLevels.Add(level, mated);
+        matedLevels.Add(levelToCheck, mated);
     }
 }
