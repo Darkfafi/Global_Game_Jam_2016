@@ -76,7 +76,7 @@ public class SeduceableTarget : MonoBehaviour
 			_timeIdle = 0;
 		}
 		_timeIdle += Time.deltaTime;
-		if (_timeIdle > 5) {
+		if (_timeIdle > 2f) {
 			if (_listeningToSeduction) {
 				PlayReversedAnimation ();
 			}
