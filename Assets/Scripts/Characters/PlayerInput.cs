@@ -69,7 +69,7 @@ public class PlayerInput : MonoBehaviour
 		}
 	
 		if (Input.GetKeyDown (KeyCode.O) || Input.GetKeyDown (KeyCode.JoystickButton13)) {
-			Debug.Log ("right arm animation");
+			Debug.Log ("left arm animation");
 			_character.CallPart (Tags.MOVE_PART_A);
 		}
 	
@@ -78,13 +78,13 @@ public class PlayerInput : MonoBehaviour
 			_character.CallPart (Tags.MOVE_PART_B);
 		}
 		Debug.Log (Input.GetAxis ("RightTriggerWin"));
-		if (Input.GetKeyDown (KeyCode.K) || Input.GetKeyDown (KeyCode.JoystickButton10)) {
-			Debug.Log ("right arm animation");
+		if (Input.GetKeyDown (KeyCode.K) || Input.GetKeyDown (KeyCode.JoystickButton10) || Input.GetAxis ("LeftTriggerMac") > .5f) {
+			Debug.Log ("left leg animation");
 			_character.CallPart (Tags.MOVE_PART_C);
 		}
 	
-		if (Input.GetKeyDown (KeyCode.L) || Input.GetKeyDown (KeyCode.JoystickButton9)) {
-			Debug.Log ("right arm animation");
+		if (Input.GetKeyDown (KeyCode.L) || Input.GetKeyDown (KeyCode.JoystickButton9) || Input.GetAxis ("RightTriggerMac") > .5f) {
+			Debug.Log ("rightleg animation");
 			_character.CallPart (Tags.MOVE_PART_D);
 		}
 
