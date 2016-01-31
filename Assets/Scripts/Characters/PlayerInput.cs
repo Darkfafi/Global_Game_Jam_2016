@@ -13,7 +13,8 @@ public class PlayerInput : MonoBehaviour
 	void Update ()
 	{
 
-#if UNITY_STANDALONE_WIN
+#if UNITY_WINDOWS
+
 		if (Input.GetKeyDown (KeyCode.Q) || Input.GetKeyDown (KeyCode.JoystickButton0)) {
 			_character.SetMouth (1);
 		}
@@ -40,7 +41,7 @@ public class PlayerInput : MonoBehaviour
 			_character.CallPart (Tags.MOVE_PART_B);
 		}
 		Debug.Log (Input.GetAxis ("RightTriggerWin"));
-		if (Input.GetKeyDown (KeyCode.K) || Input.GetAxis ("LeftTriggerWin") > .5f ) {
+		if (Input.GetKeyDown (KeyCode.K) || || Input.GetAxis ("LeftTriggerWin") > .5f ) {
 			Debug.Log ("right arm animation");
 			_character.CallPart (Tags.MOVE_PART_C);
 		}

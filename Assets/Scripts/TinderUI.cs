@@ -60,15 +60,19 @@ public class TinderUI : MonoBehaviour
             Disliked();
         }
 		*/
-#if UNITY_WINDOWS
-		if(Input.GetAxis("LeftTriggerWin") < -.4f)
-		{
-			Disliked();
-		}
+#if UNITY_STANDALONE_WIN
+		if (AxisAllowed) {
+			if(Input.GetAxis("Horizontal") < -.4f)
+			{
+				Disliked();
+				StartCoroutine (DelayResetAxis ());
+			}
 
-		if(Input.GetAxis("LeftTriggerWin") > .4f)
-		{
-			Liked();
+			if(Input.GetAxis("Horizontal") > .4f)
+			{
+				Liked();
+				StartCoroutine (DelayResetAxis ());
+			}
 		}
 #else
 		if (AxisAllowed) {
