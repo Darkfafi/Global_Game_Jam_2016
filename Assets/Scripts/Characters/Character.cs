@@ -102,7 +102,22 @@ public class Character : MonoBehaviour
 		_directionMoving = direction;
 		//gameObject.GetComponent<Animation> ().clip = _hopAnimation;
 		//gameObject.GetComponent<Animation> ().Play();
-		GetComponent<Animation> ().Play ("hopjump");
+		if (tag == "Bakatuka") {
+			GetComponent<Animation> ().Play ("hopjump");
+		}
+
+		if (tag == "Batsikoko") {
+			GetComponent<Animation> ().Play ("hopjumpbatsikoko");
+		}
+
+		if (tag == "YumYum") {
+			GetComponent<Animation> ().Play ("hopjumpYumYum");
+		}
+
+		if (tag == "Skolo") {
+			GetComponent<Animation> ().Play ("hopjumpSkolo");
+		}
+
 	}
 
 	void ShowHearts ()
@@ -118,7 +133,21 @@ public class Character : MonoBehaviour
 			if (_differents.x < 0.01f && _differents.y < 0.01f) {
 				transform.position = _destination;
 				_directionMoving = 0;
-				GetComponent<Animation> ().Play ("idle2");
+
+				if (tag == "Batsikoko") {
+					GetComponent<Animation> ().Play ("batsikokoidle2");
+				}
+				if (tag == "Bakatuka") {
+					GetComponent<Animation> ().Play ("idle2");
+				}
+
+				if (tag == "YumYum") {
+					GetComponent<Animation> ().Play ("idle2YumYum");
+				}
+
+				if (tag == "BakatukaSkolo") {
+					GetComponent<Animation> ().Play ("idle2Skolo");
+				}
 
 				//	_heartAnimation.gameObject.SetActive (false);
 				//gameObject.GetComponent<Animation> ().clip = _idleAnimation;
