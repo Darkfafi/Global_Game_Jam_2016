@@ -107,7 +107,7 @@ public class TinderUI : MonoBehaviour
         levels[nextIndex].transform.DOScale(levels[nextIndex].transform.localScale *= 0.96f, 0);
         levels[nextIndex].transform.DOScale(Vector3.one, 0.3f);
 
-        backgrounds[_indexToSwap].transform.DOScale(transform.localScale * 1.1f, 0.8f).SetEase(Ease.OutCubic);
+        //backgrounds[_indexToSwap].transform.DOScale(transform.localScale * 1.1f, 0.8f).SetEase(Ease.OutCubic);
 
         levels[_indexToSwap].like.SetActive(true);
 
@@ -135,6 +135,8 @@ public class TinderUI : MonoBehaviour
 
             matches[_indexToSwap].SetActive(true);
             bgMatch.SetActive(true);
+
+			backgrounds[_indexToSwap].transform.DOScale(transform.localScale * 1.1f, 0.8f).SetEase(Ease.OutCubic);
 
             matches[_indexToSwap].transform.DOScale(scale, 0.3f).SetEase(Ease.InQuint);
             matches[_indexToSwap].transform.DOPunchScale(Vector3.one * 0.1f, 0.2f, 10, 0.5f).SetDelay(0.3f);
@@ -166,6 +168,7 @@ public class TinderUI : MonoBehaviour
     private void MatchCompleted()
     {
         print("load level: " + levels[_indexToSwap].levelName);
+        MusicMother.Instance.PlayMating();
         LevelManager.Instance.ChooseLevel(_indexToSwap, levels.Count);
     }
 
@@ -183,6 +186,9 @@ public class TinderUI : MonoBehaviour
         int nextIndex = _indexToSwap == 0 ? levels.Count - 1 : _indexToSwap - 1;
         levels[nextIndex].transform.DOScale(levels[nextIndex].transform.localScale *= 0.96f, 0);
         levels[nextIndex].transform.DOScale(Vector3.one, 0.3f);
+
+        levels[_indexToSwap].GetComponent<AudioSource>().Stop();
+        levels[nextIndex].GetComponent<AudioSource>().Play();
 
         backgrounds[_indexToSwap].transform.SetAsFirstSibling();
 

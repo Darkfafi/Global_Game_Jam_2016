@@ -66,7 +66,7 @@ public class LevelManager : MonoBehaviour {
             Debug.LogError("Y U CALL THIS MOAR THAN ONE TIME");
             return;
         }
-        UnlockedLevel++;
+        //UnlockedLevel++;
         _currentPlayedLevel = 0;
     }
 

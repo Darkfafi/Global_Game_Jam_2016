@@ -163,6 +163,7 @@ public class SeduceableTarget : MonoBehaviour
 		Debug.Log ("Win"); //TODO Show WIN effect and go back to menu.
 		LevelManager.Instance.SetMated (LevelManager.Instance.totalLevels - 1, true);
 		Application.LoadLevel ("StartMenu");
+        MusicMother.Instance.PlayTheme();
 	}
 
 	private void LoseCondition ()
