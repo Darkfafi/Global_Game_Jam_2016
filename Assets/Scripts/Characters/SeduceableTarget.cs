@@ -28,7 +28,11 @@ public class SeduceableTarget : MonoBehaviour
 	[SerializeField]
 	private AudioClip
 		_endCharacterSounds;
+	[SerializeField]
+	private MoviePlayerSystem 
+		_climaxMoviePlayer;
 
+	private Transform movie;
 
 	public int baseDificulty = 0;
 	public float currentDifficulty = 0;
@@ -90,7 +94,7 @@ public class SeduceableTarget : MonoBehaviour
 	private void PlayReversedAnimation ()
 	{
 		for (int i = 0; i < _seduceList.allPartsNeedMoving.Count; i++) {
-			_character.CallPart (_seduceList.GetReversedMovement (_seduceList.allPartsNeedMoving [i]));
+			_character.CallPart (_seduceList.allPartsNeedMoving [i]);
 			_character.SetMouth (_seduceList.wantedSoundIndex);
 		}
 		if (_seduceList.allPartsNeedMoving.Count == 0) {
@@ -149,6 +153,17 @@ public class SeduceableTarget : MonoBehaviour
 			StartCoroutine (WaitForListen (2));
 		}
 	}
+	/*
+	private void CreateEndMovie(){
+		MoviePlayerSystem playerSys;
+		GameObject movieObj = new GameObject("Movie");
+		movieObj.transform.position = new Vector3 (0, 0, -4);
+		playerSys = movieObj.AddComponent<MoviePlayerSystem> ();
+		playerSys.movieFolder = _climaxMovieFolder;
+		playerSys.PlayMovie ();
+	}*/
+
+
 
 	private void FadeToBlack ()
 	{
@@ -162,9 +177,12 @@ public class SeduceableTarget : MonoBehaviour
 	{
 		Debug.Log ("Win"); //TODO Show WIN effect and go back to menu.
 		LevelManager.Instance.SetMated (LevelManager.Instance.totalLevels - 1, true);
-		Application.LoadLevel ("StartMenu");
+		_climaxMoviePlayer.PlayMovie ();
+		//Application.LoadLevel ("StartMenu");
         MusicMother.Instance.PlayTheme();
 	}
+
+
 
 	private void LoseCondition ()
 	{
