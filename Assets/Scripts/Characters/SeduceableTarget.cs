@@ -184,7 +184,7 @@ public class SeduceableTarget : MonoBehaviour
 	private void WinClimax ()
 	{
 		Debug.Log ("Win"); //TODO Show WIN effect and go back to menu.
-		LevelManager.Instance.SetMated (LevelManager.Instance.totalLevels - 1, true);
+		LevelManager.Instance.SetMated (LevelManager.Instance.GetCurrentLevel(), LevelManager.Instance.totalLevels, true);
 		_climaxMoviePlayer.PlayMovie (7);
 		//Application.LoadLevel ("StartMenu");
         MusicMother.Instance.PlayTheme();
@@ -204,7 +204,7 @@ public class SeduceableTarget : MonoBehaviour
 		ShowHate ();
 		if (_position == -4) {
 			Debug.Log ("End"); //TODO Show LOSE effect and go back to menu.
-			LevelManager.Instance.SetMated (LevelManager.Instance.totalLevels - 1, false);
+			LevelManager.Instance.SetMated (LevelManager.Instance.GetCurrentLevel(), LevelManager.Instance.totalLevels, false);
 			Application.LoadLevel ("StartMenu");
 		} else {
 			StartCoroutine (WaitForListen (2));
