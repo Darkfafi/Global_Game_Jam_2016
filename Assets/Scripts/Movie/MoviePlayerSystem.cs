@@ -14,15 +14,14 @@ public class MoviePlayerSystem : MonoBehaviour {
 	// Use this for initialization
 	void Awake(){
 		_renderer = gameObject.AddComponent<SpriteRenderer> ();
+		if (movieFolder == "") {
+			movieFolder = "Bakatuka"; //If there is no video then just load the first by default
+		}
 		_movie = Resources.LoadAll<Sprite> ("Climax/" + movieFolder);
 	}
 
 	public void PlayMovie (float afterSecondsToMenu = 4.5f) {
 		StopCoroutine (VideoSystem ());
-		if (movieFolder == "") {
-			movieFolder = "Bakatuka"; //If there is no video then just load the first by default
-		}
-
 		_fadeToBlack.SetActive (false);
 		Invoke ("DarkenScreen", afterSecondsToMenu);
 		Invoke ("GoBackToMenu", afterSecondsToMenu + 2.5f);
