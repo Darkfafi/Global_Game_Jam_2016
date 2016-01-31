@@ -13,8 +13,7 @@ public class PlayerInput : MonoBehaviour
 	void Update ()
 	{
 
-#if UNITY_WINDOWS
-
+#if UNITY_STANDALONE_WIN
 		if (Input.GetKeyDown (KeyCode.Q) || Input.GetKeyDown (KeyCode.JoystickButton0)) {
 			_character.SetMouth (1);
 		}
@@ -41,15 +40,17 @@ public class PlayerInput : MonoBehaviour
 			_character.CallPart (Tags.MOVE_PART_B);
 		}
 		Debug.Log (Input.GetAxis ("RightTriggerWin"));
-		if (Input.GetKeyDown (KeyCode.K) || Input.GetKeyDown (KeyCode.JoystickButton6)) {
+		if (Input.GetKeyDown (KeyCode.K) || Input.GetAxis ("LeftTriggerWin") > .5f ) {
 			Debug.Log ("right arm animation");
 			_character.CallPart (Tags.MOVE_PART_C);
 		}
 		
-		if (Input.GetKeyDown (KeyCode.L) || Input.GetKeyDown (KeyCode.JoystickButton7)) {
+		if (Input.GetKeyDown (KeyCode.L) || Input.GetAxis ("RightTriggerWin") > .5f ) {
 			Debug.Log ("right arm animation");
 			_character.CallPart (Tags.MOVE_PART_D);
 		}
+		//|| Input.GetAxis ("LeftTriggerWin") > .5f 
+		//|| Input.GetAxis ("RightTriggerWin") > .5f 
 	
 #else
 		if (Input.GetKeyDown (KeyCode.Q) || Input.GetKeyDown (KeyCode.JoystickButton16)) {
