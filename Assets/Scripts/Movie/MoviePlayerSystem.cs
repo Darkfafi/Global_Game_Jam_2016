@@ -2,7 +2,10 @@
 using System.Collections;
 
 public class MoviePlayerSystem : MonoBehaviour {
-	
+
+	public delegate void VoidDelegate ();
+	public event VoidDelegate VideoStarted;
+
 	public string movieFolder = "";
 	private Sprite[] _movie; 
 
@@ -25,6 +28,10 @@ public class MoviePlayerSystem : MonoBehaviour {
 		_fadeToBlack.SetActive (false);
 		Invoke ("DarkenScreen", afterSecondsToMenu);
 		Invoke ("GoBackToMenu", afterSecondsToMenu + 2.5f);
+
+		if (VideoStarted != null) {
+			VideoStarted();
+		}
 
 		StartCoroutine (VideoSystem ());
 	}
