@@ -17,7 +17,7 @@ public class MoviePlayerSystem : MonoBehaviour {
 		_movie = Resources.LoadAll<Sprite> ("Climax/" + movieFolder);
 	}
 
-	public void PlayMovie (float afterSecondsToMenu = 2) {
+	public void PlayMovie (float afterSecondsToMenu = 4.5) {
 		StopCoroutine (VideoSystem ());
 		if (movieFolder == "") {
 			movieFolder = "Bakatuka"; //If there is no video then just load the first by default
@@ -25,7 +25,7 @@ public class MoviePlayerSystem : MonoBehaviour {
 
 		_fadeToBlack.SetActive (false);
 		Invoke ("DarkenScreen", afterSecondsToMenu);
-		Invoke ("GoBackToMenu", afterSecondsToMenu + 3);
+		Invoke ("GoBackToMenu", afterSecondsToMenu + 2.5f);
 
 		StartCoroutine (VideoSystem ());
 	}

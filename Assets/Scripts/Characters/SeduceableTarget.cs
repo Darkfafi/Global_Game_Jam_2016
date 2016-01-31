@@ -208,7 +208,12 @@ public class SeduceableTarget : MonoBehaviour
 		_targetCharacter.MoveToDirection (1);
 		_position ++;
 		Instantiate (Resources.Load<GameObject> ("Prefabs/Heart"), new Vector3 (0, 0, -1), Quaternion.identity);
-		Invoke ("HeartAnimation", 1);
+		//Invoke ("HeartAnimation", 1);
+		if (_position > 0) {
+			if(!_heartAnimation.gameObject.activeSelf){
+				_heartAnimation.gameObject.SetActive(true);
+			}
+		}
 	}
 	private void ShowHate ()
 	{
@@ -216,12 +221,17 @@ public class SeduceableTarget : MonoBehaviour
 		_targetCharacter.MoveToDirection (-1);
 		_position --;
 		Instantiate (Resources.Load<GameObject> ("Prefabs/Wrong"), new Vector3 (0, 0, -1), Quaternion.identity);
+		if (_position <= 0) {
+			if(_heartAnimation.gameObject.activeSelf){
+				_heartAnimation.gameObject.SetActive(false);
+			}
+		}
 	}
 
 	private void HeartAnimation ()
 	{
 		_heartAnimation.gameObject.SetActive (true);
-		Invoke ("StopHeartAnimation", 2);
+		//Invoke ("StopHeartAnimation", 2);
 	}
 
 	private void StopHeartAnimation ()
