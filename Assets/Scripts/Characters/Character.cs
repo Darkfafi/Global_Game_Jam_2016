@@ -80,6 +80,7 @@ public class Character : MonoBehaviour
 			break;
 
 		}
+
 		//StopCoroutine (ResetMouth ());
 		if (m != 0) {
 			StartCoroutine (ResetMouth ());

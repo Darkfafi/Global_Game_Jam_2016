@@ -5,6 +5,6 @@ public class AutoDelete : MonoBehaviour
 {
 	void Start ()
 	{
-		Destroy (gameObject, 5);
+		Destroy (gameObject, 1);
 	}
 }

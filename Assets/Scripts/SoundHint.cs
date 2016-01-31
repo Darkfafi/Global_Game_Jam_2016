@@ -20,22 +20,32 @@ public class SoundHint : MonoBehaviour
 	*/
 	public void YellowY ()
 	{
-		Instantiate (ParticleSys [0], new Vector3 (0, 2, 0), Quaternion.identity);
+		Transform t = Instantiate (ParticleSys [0]) as Transform;//, new Vector3 (0, 2, 0), Quaternion.identity);
+		t.position = transform.position;
+		t.Translate (0, 2.5f, -4);
 	}
 
 	public void GreenA ()
 	{
-		Instantiate (ParticleSys [1], new Vector3 (0, 2, 0), Quaternion.identity);
+		Transform t = Instantiate (ParticleSys [1]) as Transform;
+		t.position = transform.position;
+		t.Translate (0, 2.5f, -4);
+		;//, new Vector3 (0, 2, 0), Quaternion.identity);
 	}
 
 	public void RedB ()
 	{
-		Instantiate (ParticleSys [2], new Vector3 (0, 2, 0), Quaternion.identity);
+		Transform t = Instantiate (ParticleSys [2]) as Transform;
+		t.position = transform.position;
+		t.Translate (0, 2.5f, -4);
+		//, new Vector3 (0, 2, 0), Quaternion.identity);
 	}
 
 	public void BlueX ()
 	{
-		Instantiate (ParticleSys [3], new Vector3 (0, 2, 0), Quaternion.identity);
+		Transform t = Instantiate (ParticleSys [3]) as Transform;
+		t.position = transform.position;
+		t.Translate (0, 2.5f, -4);//, new Vector3 (0, 2, 0), Quaternion.identity);
 	}
 
 }
