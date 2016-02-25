@@ -88,11 +88,11 @@ public class Character : MonoBehaviour
 		if (m != 0) {
 			StartCoroutine (ResetMouth ());
 
-			if (!GetComponent<AudioSource> ().isPlaying) {
-				GetComponent<AudioSource> ().clip = _allCharacterAudios [m - 1];
-				GetComponent<AudioSource> ().pitch = Random.Range (.7f, 1.4f);
-				GetComponent<AudioSource> ().Play ();
-			}
+			//if (!GetComponent<AudioSource> ().isPlaying) {
+			GetComponent<AudioSource> ().clip = _allCharacterAudios [m - 1];
+			GetComponent<AudioSource> ().pitch = Random.Range (.7f, 1.4f);
+			GetComponent<AudioSource> ().Play ();
+			//}
 		}
 
 		if (m < 1) {

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+
 public class SeduceableTarget : MonoBehaviour
 {
 
@@ -70,6 +71,7 @@ public class SeduceableTarget : MonoBehaviour
 		currentDifficulty = baseDificulty;
 		_timerTransform.GetComponent<Timer> ().TimerEnd += LoseTimerEnd;
 	}
+
 	void Update ()
 	{
 		if (Input.anyKey) {
@@ -82,6 +84,7 @@ public class SeduceableTarget : MonoBehaviour
 			}
 		}
 	}
+
 	private void ChooseSeduction (bool playRev = false)
 	{
 		int index = Random.Range (0, PatternLibrary.TOTAL_PATTERNS);
@@ -101,13 +104,17 @@ public class SeduceableTarget : MonoBehaviour
 
 	private void PlayReversedAnimation ()
 	{
-		for (int i = 0; i < _seduceList.allPartsNeedMoving.Count; i++) {
-			_character.CallPart (_seduceList.allPartsNeedMoving [i]);
-			_character.SetMouth (_seduceList.wantedSoundIndex);
+		if (!_character.GetComponent<AudioSource> ().isPlaying) {
+			for (int i = 0; i < _seduceList.allPartsNeedMoving.Count; i++) {
+				_character.CallPart (_seduceList.allPartsNeedMoving [i]);
+				_character.SetMouth (_seduceList.wantedSoundIndex);
+			}
+
+			if (_seduceList.allPartsNeedMoving.Count == 0) {
+				_character.SetMouth (_seduceList.wantedSoundIndex);
+			}
 		}
-		if (_seduceList.allPartsNeedMoving.Count == 0) {
-			_character.SetMouth (_seduceList.wantedSoundIndex);
-		}
+
 		_timeIdle = 0;
 	}
 
@@ -128,6 +135,7 @@ public class SeduceableTarget : MonoBehaviour
 			}
 		}
 	}
+
 	IEnumerator WaitForListen (int seconds = 1)
 	{
 
@@ -136,14 +144,16 @@ public class SeduceableTarget : MonoBehaviour
 		_listeningToSeduction = true;
 		_timerTransform.gameObject.SetActive (true);
 	}
+
 	private void LoseTimerEnd ()
 	{
 		_timerTransform.gameObject.SetActive (false);
 		LoseCondition ();
 	}
+
 	private void WinCondition ()
 	{
-		_timesSeducesInRow ++;
+		_timesSeducesInRow++;
 		_timesTimerDownInRow = 0;
 		if (currentDifficulty < 2) {
 			currentDifficulty += 0.5f;
@@ -184,10 +194,10 @@ public class SeduceableTarget : MonoBehaviour
 	private void WinClimax ()
 	{
 		Debug.Log ("Win"); //TODO Show WIN effect and go back to menu.
-		LevelManager.Instance.SetMated (LevelManager.Instance.GetCurrentLevel(), LevelManager.Instance.totalLevels, true);
+		LevelManager.Instance.SetMated (LevelManager.Instance.GetCurrentLevel (), LevelManager.Instance.totalLevels, true);
 		_climaxMoviePlayer.PlayMovie (7);
 		//Application.LoadLevel ("StartMenu");
-        MusicMother.Instance.PlayTheme();
+		MusicMother.Instance.PlayTheme ();
 	}
 
 
@@ -204,17 +214,18 @@ public class SeduceableTarget : MonoBehaviour
 		ShowHate ();
 		if (_position == -4) {
 			Debug.Log ("End"); //TODO Show LOSE effect and go back to menu.
-			LevelManager.Instance.SetMated (LevelManager.Instance.GetCurrentLevel(), LevelManager.Instance.totalLevels, false);
+			LevelManager.Instance.SetMated (LevelManager.Instance.GetCurrentLevel (), LevelManager.Instance.totalLevels, false);
 			Application.LoadLevel ("StartMenu");
 		} else {
 			StartCoroutine (WaitForListen (2));
 		}
 	}
+
 	private void ShowLove ()
 	{
 		_character.MoveToDirection (-1);
 		_targetCharacter.MoveToDirection (1);
-		_position ++;
+		_position++;
 		Instantiate (Resources.Load<GameObject> ("Prefabs/Heart"), new Vector3 (0, 0, -1), Quaternion.identity);
 		//Invoke ("HeartAnimation", 1);
 		if (_position == 1) {
@@ -225,11 +236,12 @@ public class SeduceableTarget : MonoBehaviour
 			_heartAnimation2.gameObject.SetActive (true);
 		}
 	}
+
 	private void ShowHate ()
 	{
 		_character.MoveToDirection (1);
 		_targetCharacter.MoveToDirection (-1);
-		_position --;
+		_position--;
 		Instantiate (Resources.Load<GameObject> ("Prefabs/Wrong"), new Vector3 (0, 0, -1), Quaternion.identity);
 		if (_position == 0) {
 			_heartAnimation0.gameObject.SetActive (false);
