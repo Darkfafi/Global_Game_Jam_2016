@@ -6,6 +6,7 @@ public class Character : MonoBehaviour
 {
 
 	public delegate void VoidDelegate ();
+
 	public event VoidDelegate DidMove;
 
 	private Vector2 _destination;
@@ -24,6 +25,7 @@ public class Character : MonoBehaviour
 	[SerializeField]
 	private AnimationClip
 		_hopAnimation;
+
 	private void Awake ()
 	{
 		_characterData = gameObject.GetComponent<CharacterData> ();
@@ -32,7 +34,7 @@ public class Character : MonoBehaviour
 	}
 
 	public CharacterData characterData {
-		get{ return _characterData;}
+		get{ return _characterData; }
 	}
 
 	public void CallPart (string namePart)
@@ -44,6 +46,7 @@ public class Character : MonoBehaviour
 			DidMove ();
 		}
 	}
+
 	public int GetIndexOfAudio (AudioClip clip)
 	{
 		return _allCharacterAudios.IndexOf (clip);
@@ -84,11 +87,14 @@ public class Character : MonoBehaviour
 		//StopCoroutine (ResetMouth ());
 		if (m != 0) {
 			StartCoroutine (ResetMouth ());
-			
-			GetComponent<AudioSource> ().clip = _allCharacterAudios [m - 1];
-			GetComponent<AudioSource> ().pitch = Random.Range (.7f, 1.4f);
-			GetComponent<AudioSource> ().Play ();
+
+			if (!GetComponent<AudioSource> ().isPlaying) {
+				GetComponent<AudioSource> ().clip = _allCharacterAudios [m - 1];
+				GetComponent<AudioSource> ().pitch = Random.Range (.7f, 1.4f);
+				GetComponent<AudioSource> ().Play ();
+			}
 		}
+
 		if (m < 1) {
 			m = 1; 
 		}
@@ -96,6 +102,10 @@ public class Character : MonoBehaviour
 			DidMove ();
 		}
 	}
+
+
+
+
 	public void MoveToDirection (int direction)
 	{
 		_destination = transform.position + new Vector3 (0.55f * direction, 0, 0);
