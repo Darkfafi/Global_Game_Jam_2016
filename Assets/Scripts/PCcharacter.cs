@@ -5,18 +5,18 @@ public class PCcharacter : MonoBehaviour
 {
 
 	public Transform RightArmUpper;
-//	public Transform RightArmLower;
+	//	public Transform RightArmLower;
 
 	public Transform LeftArmUpper;
-//	public Transform LeftArmLower;
+	//	public Transform LeftArmLower;
 
 	public Transform RightLegUpper;
-//	public Transform RightLegLower;
-//	public Transform RightFoot;
+	//	public Transform RightLegLower;
+	//	public Transform RightFoot;
 
 	public Transform LeftLegUpper;
-//	public Transform LeftLegLower;
-//	public Transform LeftFoot;
+	//	public Transform LeftLegLower;
+	//	public Transform LeftFoot;
 
 	public Transform[] mouth;
 
@@ -42,6 +42,7 @@ public class PCcharacter : MonoBehaviour
 	public Transform loveFX;
 	public Transform moveFX;
 
+	public bool isPlayer = false;
 
 	public bool allowedToPlay = true;
 
@@ -53,6 +54,10 @@ public class PCcharacter : MonoBehaviour
 
 		if (!isPC) {
 			StartCoroutine (RandomAnimation ());
+		}
+
+		if (GetComponent<PlayerInput> () != null) {
+			isPlayer = true;
 		}
 	}
 
@@ -76,10 +81,20 @@ public class PCcharacter : MonoBehaviour
 		if (m < 1) {
 			m = 1; 
 		}
-		GetComponent<AudioSource> ().clip = Sounds [m - 1];
-		GetComponent<AudioSource> ().pitch = Random.Range (.7f, 1.4f);
-		GetComponent<AudioSource> ().Play ();
 
+		if (isPlayer) {
+			GetComponent<AudioSource> ().clip = Sounds [m - 1];
+			GetComponent<AudioSource> ().pitch = Random.Range (.7f, 1.4f);
+			GetComponent<AudioSource> ().Play ();
+
+		} else {
+			if (!GetComponent<AudioSource> ().isPlaying) {
+				GetComponent<AudioSource> ().clip = Sounds [m - 1];
+				GetComponent<AudioSource> ().pitch = Random.Range (.7f, 1.4f);
+				GetComponent<AudioSource> ().Play ();
+			}
+
+		}
 	}
 
 	IEnumerator BlinkEyes ()

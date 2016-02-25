@@ -13,7 +13,7 @@ public class Character : MonoBehaviour
 	private Vector2 _differents;
 	private int _directionMoving = 0;
 
-
+	public bool isPlayer = false;
 
 	private CharacterData _characterData;
 	[SerializeField]
@@ -28,10 +28,16 @@ public class Character : MonoBehaviour
 
 	private void Awake ()
 	{
+		if (GetComponent<PlayerInput> () != null) {
+			isPlayer = true;
+		}
+
 		_characterData = gameObject.GetComponent<CharacterData> ();
 		GetComponent<Animation> ().Play ();
 		SetMouth (Random.Range (1, 3));
 	}
+
+
 
 	public CharacterData characterData {
 		get{ return _characterData; }
@@ -88,11 +94,19 @@ public class Character : MonoBehaviour
 		if (m != 0) {
 			StartCoroutine (ResetMouth ());
 
-			//if (!GetComponent<AudioSource> ().isPlaying) {
-			GetComponent<AudioSource> ().clip = _allCharacterAudios [m - 1];
-			GetComponent<AudioSource> ().pitch = Random.Range (.7f, 1.4f);
-			GetComponent<AudioSource> ().Play ();
-			//}
+			if (isPlayer) {
+				GetComponent<AudioSource> ().clip = _allCharacterAudios [m - 1];
+				GetComponent<AudioSource> ().pitch = Random.Range (.7f, 1.4f);
+				GetComponent<AudioSource> ().Play ();
+			} else {
+
+				if (!GetComponent<AudioSource> ().isPlaying) {
+					GetComponent<AudioSource> ().clip = _allCharacterAudios [m - 1];
+					GetComponent<AudioSource> ().pitch = Random.Range (.7f, 1.4f);
+					GetComponent<AudioSource> ().Play ();
+				}
+			}
+
 		}
 
 		if (m < 1) {
